@@ -1,0 +1,24 @@
+C:\Users\DAM2Alu1\source\repos\Practica1\Practica1\bin\Debug\Practica1.exe.config
+C:\Users\DAM2Alu1\source\repos\Practica1\Practica1\bin\Debug\Practica1.exe
+C:\Users\DAM2Alu1\source\repos\Practica1\Practica1\bin\Debug\Practica1.pdb
+C:\Users\DAM2Alu1\source\repos\Practica1\Practica1\bin\Debug\Practica1.xml
+C:\Users\DAM2Alu1\source\repos\Practica1\Practica1\obj\Debug\Practica1.vbproj.AssemblyReference.cache
+C:\Users\DAM2Alu1\source\repos\Practica1\Practica1\obj\Debug\Practica1.Resources.resources
+C:\Users\DAM2Alu1\source\repos\Practica1\Practica1\obj\Debug\Practica1.vbproj.GenerateResource.cache
+C:\Users\DAM2Alu1\source\repos\Practica1\Practica1\obj\Debug\Practica1.vbproj.CoreCompileInputs.cache
+C:\Users\DAM2Alu1\source\repos\Practica1\Practica1\obj\Debug\Practica1.exe
+C:\Users\DAM2Alu1\source\repos\Practica1\Practica1\obj\Debug\Practica1.xml
+C:\Users\DAM2Alu1\source\repos\Practica1\Practica1\obj\Debug\Practica1.pdb
+C:\Users\DAM2Alu1\source\repos\Practica1\Practica1\obj\Debug\Practica1.Form1.resources
+C:\Users\DAM2Alu1\source\repos\Practica visual basic\Practica1\bin\Debug\Practica1.exe.config
+C:\Users\DAM2Alu1\source\repos\Practica visual basic\Practica1\bin\Debug\Practica1.exe
+C:\Users\DAM2Alu1\source\repos\Practica visual basic\Practica1\bin\Debug\Practica1.pdb
+C:\Users\DAM2Alu1\source\repos\Practica visual basic\Practica1\bin\Debug\Practica1.xml
+C:\Users\DAM2Alu1\source\repos\Practica visual basic\Practica1\obj\Debug\Practica1.vbproj.AssemblyReference.cache
+C:\Users\DAM2Alu1\source\repos\Practica visual basic\Practica1\obj\Debug\Practica1.Form1.resources
+C:\Users\DAM2Alu1\source\repos\Practica visual basic\Practica1\obj\Debug\Practica1.Resources.resources
+C:\Users\DAM2Alu1\source\repos\Practica visual basic\Practica1\obj\Debug\Practica1.vbproj.GenerateResource.cache
+C:\Users\DAM2Alu1\source\repos\Practica visual basic\Practica1\obj\Debug\Practica1.vbproj.CoreCompileInputs.cache
+C:\Users\DAM2Alu1\source\repos\Practica visual basic\Practica1\obj\Debug\Practica1.exe
+C:\Users\DAM2Alu1\source\repos\Practica visual basic\Practica1\obj\Debug\Practica1.xml
+C:\Users\DAM2Alu1\source\repos\Practica visual basic\Practica1\obj\Debug\Practica1.pdb

@@ -1,0 +1,16 @@
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\obj\Debug\netcoreapp3.1\practica5.vbproj.AssemblyReference.cache
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\obj\Debug\netcoreapp3.1\practica5.Form1.resources
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\obj\Debug\netcoreapp3.1\practica5.vbproj.GenerateResource.cache
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\obj\Debug\netcoreapp3.1\practica5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\obj\Debug\netcoreapp3.1\practica5.AssemblyInfoInputs.cache
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\obj\Debug\netcoreapp3.1\practica5.AssemblyInfo.vb
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\obj\Debug\netcoreapp3.1\practica5.vbproj.CoreCompileInputs.cache
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\bin\Debug\netcoreapp3.1\practica5.exe
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\bin\Debug\netcoreapp3.1\practica5.deps.json
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\bin\Debug\netcoreapp3.1\practica5.runtimeconfig.json
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\bin\Debug\netcoreapp3.1\practica5.runtimeconfig.dev.json
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\bin\Debug\netcoreapp3.1\practica5.dll
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\bin\Debug\netcoreapp3.1\practica5.pdb
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\obj\Debug\netcoreapp3.1\practica5.dll
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\obj\Debug\netcoreapp3.1\practica5.pdb
+C:\Users\DAM2Alu1\source\repos\practica5\practica5\obj\Debug\netcoreapp3.1\practica5.genruntimeconfig.cache
