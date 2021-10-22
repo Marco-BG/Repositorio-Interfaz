@@ -23,13 +23,18 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ltb_listaIzquierda = New System.Windows.Forms.ListBox()
-        Me.entradaLista = New System.Windows.Forms.TextBox()
-        Me.btn_borrarLista = New System.Windows.Forms.Button()
-        Me.btn_borrarDerecha = New System.Windows.Forms.Button()
-        Me.entradaListaDerecha = New System.Windows.Forms.TextBox()
-        Me.ltb_listaDerecha = New System.Windows.Forms.ListBox()
+        Me.entradaListaIzquierda = New System.Windows.Forms.TextBox()
+        Me.btn_borrarListaIzquierda = New System.Windows.Forms.Button()
+        Me.btn_borrarListaMedio = New System.Windows.Forms.Button()
+        Me.entradaListaMedio = New System.Windows.Forms.TextBox()
+        Me.ltb_listaMedio = New System.Windows.Forms.ListBox()
         Me.btn_envia = New System.Windows.Forms.Button()
         Me.btn_regresa = New System.Windows.Forms.Button()
+        Me.btn_borrarListaUltima = New System.Windows.Forms.Button()
+        Me.entradaListaUltima = New System.Windows.Forms.TextBox()
+        Me.ltb_listaUltima = New System.Windows.Forms.ListBox()
+        Me.btn_regresa_secundario = New System.Windows.Forms.Button()
+        Me.btn_envia_secundario = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ltb_listaIzquierda
@@ -37,60 +42,62 @@ Partial Class Form1
         Me.ltb_listaIzquierda.AllowDrop = True
         Me.ltb_listaIzquierda.FormattingEnabled = True
         Me.ltb_listaIzquierda.ItemHeight = 15
-        Me.ltb_listaIzquierda.Items.AddRange(New Object() {"Ford", "Mazda", "Seat", "Audi", "Toyota"})
-        Me.ltb_listaIzquierda.Location = New System.Drawing.Point(126, 106)
+        Me.ltb_listaIzquierda.Items.AddRange(New Object() {"Audi", "Ford", "Mazda", "Seat", "Toyota"})
+        Me.ltb_listaIzquierda.Location = New System.Drawing.Point(59, 106)
         Me.ltb_listaIzquierda.Name = "ltb_listaIzquierda"
-        Me.ltb_listaIzquierda.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended
+        Me.ltb_listaIzquierda.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
         Me.ltb_listaIzquierda.Size = New System.Drawing.Size(120, 139)
+        Me.ltb_listaIzquierda.Sorted = True
         Me.ltb_listaIzquierda.TabIndex = 0
         '
-        'entradaLista
+        'entradaListaIzquierda
         '
-        Me.entradaLista.Location = New System.Drawing.Point(126, 264)
-        Me.entradaLista.Name = "entradaLista"
-        Me.entradaLista.Size = New System.Drawing.Size(120, 23)
-        Me.entradaLista.TabIndex = 1
+        Me.entradaListaIzquierda.Location = New System.Drawing.Point(59, 251)
+        Me.entradaListaIzquierda.Name = "entradaListaIzquierda"
+        Me.entradaListaIzquierda.Size = New System.Drawing.Size(120, 23)
+        Me.entradaListaIzquierda.TabIndex = 1
         '
-        'btn_borrarLista
+        'btn_borrarListaIzquierda
         '
-        Me.btn_borrarLista.Location = New System.Drawing.Point(126, 65)
-        Me.btn_borrarLista.Name = "btn_borrarLista"
-        Me.btn_borrarLista.Size = New System.Drawing.Size(120, 23)
-        Me.btn_borrarLista.TabIndex = 2
-        Me.btn_borrarLista.Text = "Borrar esta lista"
-        Me.btn_borrarLista.UseVisualStyleBackColor = True
+        Me.btn_borrarListaIzquierda.Location = New System.Drawing.Point(59, 77)
+        Me.btn_borrarListaIzquierda.Name = "btn_borrarListaIzquierda"
+        Me.btn_borrarListaIzquierda.Size = New System.Drawing.Size(120, 23)
+        Me.btn_borrarListaIzquierda.TabIndex = 2
+        Me.btn_borrarListaIzquierda.Text = "Borrar primera"
+        Me.btn_borrarListaIzquierda.UseVisualStyleBackColor = True
         '
-        'btn_borrarDerecha
+        'btn_borrarListaMedio
         '
-        Me.btn_borrarDerecha.Location = New System.Drawing.Point(507, 65)
-        Me.btn_borrarDerecha.Name = "btn_borrarDerecha"
-        Me.btn_borrarDerecha.Size = New System.Drawing.Size(120, 23)
-        Me.btn_borrarDerecha.TabIndex = 5
-        Me.btn_borrarDerecha.Text = "Borrar lista derecha"
-        Me.btn_borrarDerecha.UseVisualStyleBackColor = True
+        Me.btn_borrarListaMedio.Location = New System.Drawing.Point(319, 77)
+        Me.btn_borrarListaMedio.Name = "btn_borrarListaMedio"
+        Me.btn_borrarListaMedio.Size = New System.Drawing.Size(120, 23)
+        Me.btn_borrarListaMedio.TabIndex = 5
+        Me.btn_borrarListaMedio.Text = "Borrar medio"
+        Me.btn_borrarListaMedio.UseVisualStyleBackColor = True
         '
-        'entradaListaDerecha
+        'entradaListaMedio
         '
-        Me.entradaListaDerecha.Location = New System.Drawing.Point(507, 264)
-        Me.entradaListaDerecha.Name = "entradaListaDerecha"
-        Me.entradaListaDerecha.Size = New System.Drawing.Size(120, 23)
-        Me.entradaListaDerecha.TabIndex = 4
+        Me.entradaListaMedio.Location = New System.Drawing.Point(319, 252)
+        Me.entradaListaMedio.Name = "entradaListaMedio"
+        Me.entradaListaMedio.Size = New System.Drawing.Size(120, 23)
+        Me.entradaListaMedio.TabIndex = 4
         '
-        'ltb_listaDerecha
+        'ltb_listaMedio
         '
-        Me.ltb_listaDerecha.AllowDrop = True
-        Me.ltb_listaDerecha.FormattingEnabled = True
-        Me.ltb_listaDerecha.ItemHeight = 15
-        Me.ltb_listaDerecha.Items.AddRange(New Object() {"Pez", "Leon", "Gato", "Perro"})
-        Me.ltb_listaDerecha.Location = New System.Drawing.Point(507, 106)
-        Me.ltb_listaDerecha.Name = "ltb_listaDerecha"
-        Me.ltb_listaDerecha.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended
-        Me.ltb_listaDerecha.Size = New System.Drawing.Size(120, 139)
-        Me.ltb_listaDerecha.TabIndex = 3
+        Me.ltb_listaMedio.AllowDrop = True
+        Me.ltb_listaMedio.FormattingEnabled = True
+        Me.ltb_listaMedio.ItemHeight = 15
+        Me.ltb_listaMedio.Items.AddRange(New Object() {"Gato", "Leon", "Perro", "Pez"})
+        Me.ltb_listaMedio.Location = New System.Drawing.Point(319, 106)
+        Me.ltb_listaMedio.Name = "ltb_listaMedio"
+        Me.ltb_listaMedio.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
+        Me.ltb_listaMedio.Size = New System.Drawing.Size(120, 139)
+        Me.ltb_listaMedio.Sorted = True
+        Me.ltb_listaMedio.TabIndex = 3
         '
         'btn_envia
         '
-        Me.btn_envia.Location = New System.Drawing.Point(352, 131)
+        Me.btn_envia.Location = New System.Drawing.Point(215, 77)
         Me.btn_envia.Name = "btn_envia"
         Me.btn_envia.Size = New System.Drawing.Size(75, 23)
         Me.btn_envia.TabIndex = 6
@@ -99,25 +106,77 @@ Partial Class Form1
         '
         'btn_regresa
         '
-        Me.btn_regresa.Location = New System.Drawing.Point(352, 181)
+        Me.btn_regresa.Location = New System.Drawing.Point(215, 251)
         Me.btn_regresa.Name = "btn_regresa"
         Me.btn_regresa.Size = New System.Drawing.Size(75, 23)
         Me.btn_regresa.TabIndex = 7
         Me.btn_regresa.Text = " <-Regresa"
         Me.btn_regresa.UseVisualStyleBackColor = True
         '
+        'btn_borrarListaUltima
+        '
+        Me.btn_borrarListaUltima.Location = New System.Drawing.Point(587, 78)
+        Me.btn_borrarListaUltima.Name = "btn_borrarListaUltima"
+        Me.btn_borrarListaUltima.Size = New System.Drawing.Size(120, 23)
+        Me.btn_borrarListaUltima.TabIndex = 10
+        Me.btn_borrarListaUltima.Text = "Borrar última"
+        Me.btn_borrarListaUltima.UseVisualStyleBackColor = True
+        '
+        'entradaListaUltima
+        '
+        Me.entradaListaUltima.Location = New System.Drawing.Point(587, 251)
+        Me.entradaListaUltima.Name = "entradaListaUltima"
+        Me.entradaListaUltima.Size = New System.Drawing.Size(120, 23)
+        Me.entradaListaUltima.TabIndex = 9
+        '
+        'ltb_listaUltima
+        '
+        Me.ltb_listaUltima.AllowDrop = True
+        Me.ltb_listaUltima.FormattingEnabled = True
+        Me.ltb_listaUltima.ItemHeight = 15
+        Me.ltb_listaUltima.Items.AddRange(New Object() {"Audi", "Ford", "Mazda", "Seat", "Toyota"})
+        Me.ltb_listaUltima.Location = New System.Drawing.Point(587, 107)
+        Me.ltb_listaUltima.Name = "ltb_listaUltima"
+        Me.ltb_listaUltima.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
+        Me.ltb_listaUltima.Size = New System.Drawing.Size(120, 139)
+        Me.ltb_listaUltima.Sorted = True
+        Me.ltb_listaUltima.TabIndex = 8
+        '
+        'btn_regresa_secundario
+        '
+        Me.btn_regresa_secundario.Location = New System.Drawing.Point(477, 251)
+        Me.btn_regresa_secundario.Name = "btn_regresa_secundario"
+        Me.btn_regresa_secundario.Size = New System.Drawing.Size(75, 23)
+        Me.btn_regresa_secundario.TabIndex = 12
+        Me.btn_regresa_secundario.Text = " <-Regresa"
+        Me.btn_regresa_secundario.UseVisualStyleBackColor = True
+        '
+        'btn_envia_secundario
+        '
+        Me.btn_envia_secundario.Location = New System.Drawing.Point(477, 77)
+        Me.btn_envia_secundario.Name = "btn_envia_secundario"
+        Me.btn_envia_secundario.Size = New System.Drawing.Size(75, 23)
+        Me.btn_envia_secundario.TabIndex = 11
+        Me.btn_envia_secundario.Text = "Envía ->"
+        Me.btn_envia_secundario.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btn_regresa_secundario)
+        Me.Controls.Add(Me.btn_envia_secundario)
+        Me.Controls.Add(Me.btn_borrarListaUltima)
+        Me.Controls.Add(Me.entradaListaUltima)
+        Me.Controls.Add(Me.ltb_listaUltima)
         Me.Controls.Add(Me.btn_regresa)
         Me.Controls.Add(Me.btn_envia)
-        Me.Controls.Add(Me.btn_borrarDerecha)
-        Me.Controls.Add(Me.entradaListaDerecha)
-        Me.Controls.Add(Me.ltb_listaDerecha)
-        Me.Controls.Add(Me.btn_borrarLista)
-        Me.Controls.Add(Me.entradaLista)
+        Me.Controls.Add(Me.btn_borrarListaMedio)
+        Me.Controls.Add(Me.entradaListaMedio)
+        Me.Controls.Add(Me.ltb_listaMedio)
+        Me.Controls.Add(Me.btn_borrarListaIzquierda)
+        Me.Controls.Add(Me.entradaListaIzquierda)
         Me.Controls.Add(Me.ltb_listaIzquierda)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -128,10 +187,16 @@ Partial Class Form1
 
     Friend WithEvents ltb_listaIzquierda As ListBox
     Friend WithEvents entradaLista As TextBox
-    Friend WithEvents btn_borrarLista As Button
-    Friend WithEvents btn_borrarDerecha As Button
-    Friend WithEvents entradaListaDerecha As TextBox
-    Friend WithEvents ltb_listaDerecha As ListBox
+    Friend WithEvents btn_borrarListaIzquierda As Button
+    Friend WithEvents btn_borrarListaMedio As Button
+    Friend WithEvents entradaListaMedio As TextBox
+    Friend WithEvents ltb_listaMedio As ListBox
     Friend WithEvents btn_envia As Button
     Friend WithEvents btn_regresa As Button
+    Friend WithEvents btn_borrarListaUltima As Button
+    Friend WithEvents entradaListaUltima As TextBox
+    Friend WithEvents ltb_listaUltima As ListBox
+    Friend WithEvents btn_regresa_secundario As Button
+    Friend WithEvents btn_envia_secundario As Button
+    Friend WithEvents entradaListaIzquierda As TextBox
 End Class
