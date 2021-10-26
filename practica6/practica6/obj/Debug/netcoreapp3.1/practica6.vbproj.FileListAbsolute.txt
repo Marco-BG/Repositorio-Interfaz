@@ -1,0 +1,20 @@
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\obj\Debug\netcoreapp3.1\practica6.vbproj.AssemblyReference.cache
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\obj\Debug\netcoreapp3.1\practica6.vbproj.GenerateResource.cache
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\obj\Debug\netcoreapp3.1\practica6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\obj\Debug\netcoreapp3.1\practica6.AssemblyInfoInputs.cache
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\obj\Debug\netcoreapp3.1\practica6.AssemblyInfo.vb
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\obj\Debug\netcoreapp3.1\practica6.vbproj.CoreCompileInputs.cache
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\obj\Debug\netcoreapp3.1\practica6.genruntimeconfig.cache
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\obj\Debug\netcoreapp3.1\tema6.Form1.resources
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\bin\Debug\netcoreapp3.1\Tema6-tiempo en ejecucion.exe
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\bin\Debug\netcoreapp3.1\Tema6-tiempo en ejecucion.deps.json
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\bin\Debug\netcoreapp3.1\Tema6-tiempo en ejecucion.runtimeconfig.json
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\bin\Debug\netcoreapp3.1\Tema6-tiempo en ejecucion.runtimeconfig.dev.json
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\bin\Debug\netcoreapp3.1\Tema6-tiempo en ejecucion.dll
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\bin\Debug\netcoreapp3.1\Tema6-tiempo en ejecucion.pdb
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\obj\Debug\netcoreapp3.1\Tema6-tiempo en ejecucion.dll
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\obj\Debug\netcoreapp3.1\Tema6-tiempo en ejecucion.pdb
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\bin\Debug\netcoreapp3.1\MisClases.dll
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\bin\Debug\netcoreapp3.1\System.Windows.Forms.VisualStudio.15.0.dll
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\bin\Debug\netcoreapp3.1\MisClases.pdb
+C:\Users\DAM2Alu1\source\repos\practica6\practica6\obj\Debug\netcoreapp3.1\practica6.vbproj.CopyComplete

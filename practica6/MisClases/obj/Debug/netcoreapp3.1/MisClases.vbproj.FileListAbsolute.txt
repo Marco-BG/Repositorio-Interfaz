@@ -1,0 +1,12 @@
+C:\Users\DAM2Alu1\source\repos\practica6\MisClases\bin\Debug\netcoreapp3.1\MisClases.deps.json
+C:\Users\DAM2Alu1\source\repos\practica6\MisClases\bin\Debug\netcoreapp3.1\MisClases.dll
+C:\Users\DAM2Alu1\source\repos\practica6\MisClases\bin\Debug\netcoreapp3.1\MisClases.pdb
+C:\Users\DAM2Alu1\source\repos\practica6\MisClases\bin\Debug\netcoreapp3.1\System.Windows.Forms.VisualStudio.15.0.dll
+C:\Users\DAM2Alu1\source\repos\practica6\MisClases\obj\Debug\netcoreapp3.1\MisClases.vbproj.AssemblyReference.cache
+C:\Users\DAM2Alu1\source\repos\practica6\MisClases\obj\Debug\netcoreapp3.1\MisClases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DAM2Alu1\source\repos\practica6\MisClases\obj\Debug\netcoreapp3.1\MisClases.AssemblyInfoInputs.cache
+C:\Users\DAM2Alu1\source\repos\practica6\MisClases\obj\Debug\netcoreapp3.1\MisClases.AssemblyInfo.vb
+C:\Users\DAM2Alu1\source\repos\practica6\MisClases\obj\Debug\netcoreapp3.1\MisClases.vbproj.CoreCompileInputs.cache
+C:\Users\DAM2Alu1\source\repos\practica6\MisClases\obj\Debug\netcoreapp3.1\MisClases.vbproj.CopyComplete
+C:\Users\DAM2Alu1\source\repos\practica6\MisClases\obj\Debug\netcoreapp3.1\MisClases.dll
+C:\Users\DAM2Alu1\source\repos\practica6\MisClases\obj\Debug\netcoreapp3.1\MisClases.pdb
