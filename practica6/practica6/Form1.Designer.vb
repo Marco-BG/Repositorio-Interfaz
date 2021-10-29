@@ -32,7 +32,7 @@ Partial Class Form1
         'lbl_textContador
         '
         Me.lbl_textContador.AutoSize = True
-        Me.lbl_textContador.Location = New System.Drawing.Point(562, 13)
+        Me.lbl_textContador.Location = New System.Drawing.Point(560, 9)
         Me.lbl_textContador.Name = "lbl_textContador"
         Me.lbl_textContador.Size = New System.Drawing.Size(90, 15)
         Me.lbl_textContador.TabIndex = 0
@@ -41,9 +41,9 @@ Partial Class Form1
         'panel
         '
         Me.panel.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.panel.Location = New System.Drawing.Point(444, 31)
+        Me.panel.Location = New System.Drawing.Point(445, 27)
         Me.panel.Name = "panel"
-        Me.panel.Size = New System.Drawing.Size(344, 314)
+        Me.panel.Size = New System.Drawing.Size(344, 488)
         Me.panel.TabIndex = 1
         '
         'btn_masTextBox
@@ -68,7 +68,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(893, 514)
         Me.Controls.Add(Me.btn_menosTextBox)
         Me.Controls.Add(Me.btn_masTextBox)
         Me.Controls.Add(Me.panel)
