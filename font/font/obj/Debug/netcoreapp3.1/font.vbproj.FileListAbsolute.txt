@@ -1,0 +1,16 @@
+C:\Users\DAM2Alu1\source\repos\font\font\obj\Debug\netcoreapp3.1\font.vbproj.AssemblyReference.cache
+C:\Users\DAM2Alu1\source\repos\font\font\obj\Debug\netcoreapp3.1\font.Form1.resources
+C:\Users\DAM2Alu1\source\repos\font\font\obj\Debug\netcoreapp3.1\font.vbproj.GenerateResource.cache
+C:\Users\DAM2Alu1\source\repos\font\font\obj\Debug\netcoreapp3.1\font.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DAM2Alu1\source\repos\font\font\obj\Debug\netcoreapp3.1\font.AssemblyInfoInputs.cache
+C:\Users\DAM2Alu1\source\repos\font\font\obj\Debug\netcoreapp3.1\font.AssemblyInfo.vb
+C:\Users\DAM2Alu1\source\repos\font\font\obj\Debug\netcoreapp3.1\font.vbproj.CoreCompileInputs.cache
+C:\Users\DAM2Alu1\source\repos\font\font\bin\Debug\netcoreapp3.1\font.exe
+C:\Users\DAM2Alu1\source\repos\font\font\bin\Debug\netcoreapp3.1\font.deps.json
+C:\Users\DAM2Alu1\source\repos\font\font\bin\Debug\netcoreapp3.1\font.runtimeconfig.json
+C:\Users\DAM2Alu1\source\repos\font\font\bin\Debug\netcoreapp3.1\font.runtimeconfig.dev.json
+C:\Users\DAM2Alu1\source\repos\font\font\bin\Debug\netcoreapp3.1\font.dll
+C:\Users\DAM2Alu1\source\repos\font\font\bin\Debug\netcoreapp3.1\font.pdb
+C:\Users\DAM2Alu1\source\repos\font\font\obj\Debug\netcoreapp3.1\font.dll
+C:\Users\DAM2Alu1\source\repos\font\font\obj\Debug\netcoreapp3.1\font.pdb
+C:\Users\DAM2Alu1\source\repos\font\font\obj\Debug\netcoreapp3.1\font.genruntimeconfig.cache
