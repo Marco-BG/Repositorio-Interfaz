@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DAM2Alu1\\source\\repos\\font\\font\\fuentes.vbproj": {}
+    "C:\\Users\\DAM2Alu1\\Desktop\\Curso DAM2\\Repositorio Interfaces\\font\\font\\fuentes.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\DAM2Alu1\\source\\repos\\font\\font\\fuentes.vbproj": {
+    "C:\\Users\\DAM2Alu1\\Desktop\\Curso DAM2\\Repositorio Interfaces\\font\\font\\fuentes.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DAM2Alu1\\source\\repos\\font\\font\\fuentes.vbproj",
+        "projectUniqueName": "C:\\Users\\DAM2Alu1\\Desktop\\Curso DAM2\\Repositorio Interfaces\\font\\font\\fuentes.vbproj",
         "projectName": "fuentes",
-        "projectPath": "C:\\Users\\DAM2Alu1\\source\\repos\\font\\font\\fuentes.vbproj",
+        "projectPath": "C:\\Users\\DAM2Alu1\\Desktop\\Curso DAM2\\Repositorio Interfaces\\font\\font\\fuentes.vbproj",
         "packagesPath": "C:\\Users\\DAM2Alu1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DAM2Alu1\\source\\repos\\font\\font\\obj\\",
+        "outputPath": "C:\\Users\\DAM2Alu1\\Desktop\\Curso DAM2\\Repositorio Interfaces\\font\\font\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DAM2Alu1\\AppData\\Roaming\\NuGet\\NuGet.Config",
