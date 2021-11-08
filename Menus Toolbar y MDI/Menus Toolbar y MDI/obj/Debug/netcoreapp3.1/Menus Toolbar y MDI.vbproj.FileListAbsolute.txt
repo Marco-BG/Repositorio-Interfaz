@@ -1,0 +1,11 @@
+C:\Users\Marco Alonso Benegas\source\repos\Menus Toolbar y MDI\Menus Toolbar y MDI\obj\Debug\netcoreapp3.1\Menus Toolbar y MDI.vbproj.AssemblyReference.cache
+C:\Users\Marco Alonso Benegas\source\repos\Menus Toolbar y MDI\Menus Toolbar y MDI\obj\Debug\netcoreapp3.1\Menus_Toolbar_y_MDI.Form1.resources
+C:\Users\Marco Alonso Benegas\source\repos\Menus Toolbar y MDI\Menus Toolbar y MDI\obj\Debug\netcoreapp3.1\Menus_Toolbar_y_MDI.formInformacion.resources
+C:\Users\Marco Alonso Benegas\source\repos\Menus Toolbar y MDI\Menus Toolbar y MDI\obj\Debug\netcoreapp3.1\Menus_Toolbar_y_MDI.formTexto.resources
+C:\Users\Marco Alonso Benegas\source\repos\Menus Toolbar y MDI\Menus Toolbar y MDI\obj\Debug\netcoreapp3.1\Menus_Toolbar_y_MDI.imagenForm.resources
+C:\Users\Marco Alonso Benegas\source\repos\Menus Toolbar y MDI\Menus Toolbar y MDI\obj\Debug\netcoreapp3.1\Menus_Toolbar_y_MDI.Resources.resources
+C:\Users\Marco Alonso Benegas\source\repos\Menus Toolbar y MDI\Menus Toolbar y MDI\obj\Debug\netcoreapp3.1\Menus Toolbar y MDI.vbproj.GenerateResource.cache
+C:\Users\Marco Alonso Benegas\source\repos\Menus Toolbar y MDI\Menus Toolbar y MDI\obj\Debug\netcoreapp3.1\Menus Toolbar y MDI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marco Alonso Benegas\source\repos\Menus Toolbar y MDI\Menus Toolbar y MDI\obj\Debug\netcoreapp3.1\Menus Toolbar y MDI.AssemblyInfoInputs.cache
+C:\Users\Marco Alonso Benegas\source\repos\Menus Toolbar y MDI\Menus Toolbar y MDI\obj\Debug\netcoreapp3.1\Menus Toolbar y MDI.AssemblyInfo.vb
+C:\Users\Marco Alonso Benegas\source\repos\Menus Toolbar y MDI\Menus Toolbar y MDI\obj\Debug\netcoreapp3.1\Menus Toolbar y MDI.vbproj.CoreCompileInputs.cache
