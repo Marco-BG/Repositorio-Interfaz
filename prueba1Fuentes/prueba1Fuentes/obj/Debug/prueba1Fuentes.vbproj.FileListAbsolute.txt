@@ -1,0 +1,12 @@
+C:\Users\Marco Alonso Benegas\source\repos\prueba1Fuentes\prueba1Fuentes\bin\Debug\prueba1Fuentes.exe.config
+C:\Users\Marco Alonso Benegas\source\repos\prueba1Fuentes\prueba1Fuentes\bin\Debug\prueba1Fuentes.exe
+C:\Users\Marco Alonso Benegas\source\repos\prueba1Fuentes\prueba1Fuentes\bin\Debug\prueba1Fuentes.pdb
+C:\Users\Marco Alonso Benegas\source\repos\prueba1Fuentes\prueba1Fuentes\bin\Debug\prueba1Fuentes.xml
+C:\Users\Marco Alonso Benegas\source\repos\prueba1Fuentes\prueba1Fuentes\obj\Debug\prueba1Fuentes.vbproj.AssemblyReference.cache
+C:\Users\Marco Alonso Benegas\source\repos\prueba1Fuentes\prueba1Fuentes\obj\Debug\prueba1Fuentes.Form1.resources
+C:\Users\Marco Alonso Benegas\source\repos\prueba1Fuentes\prueba1Fuentes\obj\Debug\prueba1Fuentes.Resources.resources
+C:\Users\Marco Alonso Benegas\source\repos\prueba1Fuentes\prueba1Fuentes\obj\Debug\prueba1Fuentes.vbproj.GenerateResource.cache
+C:\Users\Marco Alonso Benegas\source\repos\prueba1Fuentes\prueba1Fuentes\obj\Debug\prueba1Fuentes.vbproj.CoreCompileInputs.cache
+C:\Users\Marco Alonso Benegas\source\repos\prueba1Fuentes\prueba1Fuentes\obj\Debug\prueba1Fuentes.exe
+C:\Users\Marco Alonso Benegas\source\repos\prueba1Fuentes\prueba1Fuentes\obj\Debug\prueba1Fuentes.xml
+C:\Users\Marco Alonso Benegas\source\repos\prueba1Fuentes\prueba1Fuentes\obj\Debug\prueba1Fuentes.pdb
