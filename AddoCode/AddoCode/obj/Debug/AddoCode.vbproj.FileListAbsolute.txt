@@ -1,0 +1,16 @@
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\bin\Debug\AddoCode.exe.config
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\bin\Debug\AddoCode.exe
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\bin\Debug\AddoCode.pdb
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\bin\Debug\AddoCode.xml
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\obj\Debug\AddoCode.vbproj.AssemblyReference.cache
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\obj\Debug\AddoCode.Form1.resources
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\obj\Debug\AddoCode.Resources.resources
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\obj\Debug\AddoCode.vbproj.GenerateResource.cache
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\obj\Debug\AddoCode.vbproj.CoreCompileInputs.cache
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\obj\Debug\AddoCode.exe
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\obj\Debug\AddoCode.xml
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\obj\Debug\AddoCode.pdb
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\bin\Debug\Neptuno.mdb
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\bin\Debug\Form1.resx
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\bin\Debug\Form1.vb
+C:\Users\DAM2Alu1\source\repos\AddoCode\AddoCode\bin\Debug\Form1.Designer.vb
