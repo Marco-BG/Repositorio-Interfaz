@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="webExplorador.exe" version="1.0.0.0" publicKeyToken="eeaba50345e841ec" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="webExplorador" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="webExplorador.exe" parameters="" />
+    <hostInBrowser xmlns="urn:schemas-microsoft-com:asm.v3" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="Internet" Description="Default rights given to Internet applications" ID="Custom" SameSite="site">
+          <IPermission version="1" class="System.Security.Permissions.FileDialogPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Access="Open" />
+          <IPermission UserQuota="1024000" version="1" class="System.Security.Permissions.IsolatedStorageFilePermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Allowed="ApplicationIsolationByUser" />
+          <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="Execution" />
+          <IPermission version="1" class="System.Security.Permissions.UIPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Clipboard="OwnClipboard" Window="SafeTopLevelWindows" />
+          <IPermission version="1" class="System.Drawing.Printing.PrintingPermission, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Level="SafePrinting" />
+          <IPermission version="1" class="System.Security.Permissions.MediaPermission, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Audio="SafeAudio" Image="SafeImage" Video="SafeVideo" />
+          <IPermission version="1" class="System.Security.Permissions.WebBrowserPermission, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Level="Safe" />
+        </PermissionSet>
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="webExplorador.exe" size="12200">
+      <assemblyIdentity name="webExplorador" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>LdZjMIAPCaD5pWindXJrXHnuDSAOocoljKRatkukW6g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=IESGUARA\DAM2Alu1" issuerKeyHash="c0165f6a8c79bb9af52cc5c777b77ceb5561d612" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>pDQMpWnwqZjXl2p5/Uzs7YR08UM=</DigestValue></Reference></SignedInfo><SignatureValue>PMXi/L6Why/DtHm2guSmPvP9g5erymypesiREiMhTinOpjY1fuZSNjGX/AUQbIuGOiylR8BsaNHvjPlZGDbTxDzJVIErVR2KTd0SpB4oEC0Ajg2xiOfQ3gvD9yeCDhZ+AqjcbhcwCnRBeHfVmvJi483HOW/0S0e+KooWGBlOHzY=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>u5nYWREkpqOJiW0kagStzPNMOc6QB0UH7+SoMeY79kZ3D1DaMA6h7K0zZdpAfIHo8M1QqKGGmRkt+HGMA+0U2BpSqh9a99djmOKMgukMGdGRlW+i3a4H37UWWpjXBrDbM6osEpS2MqsvkxQRaLhihNaNTZnpXIit1OpjvrjtZd0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="43f17484edec4cfd796a97d798a9f069a50c34a4" Description="" Url=""><as:assemblyIdentity name="webExplorador.exe" version="1.0.0.0" publicKeyToken="eeaba50345e841ec" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=IESGUARA\DAM2Alu1</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>cc0zWc1dWRAClIQ+xadMXD3meGg=</DigestValue></Reference></SignedInfo><SignatureValue>APtWKs/nAhovunFGITEn8AD6lbaZJRheZOawGhqfK59fzC1Z9Rzo9E7xGI/DYVTQcfPh34xblfk8iiC02FarY8+sUo8QOZVJ5E0r/A+VAaXqBto1RlgvXQD3QnOiXqeZ0t0TXvVC6JXaihsViaLs3onqxnfrPDg8ntzIC7Z1ijs=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>u5nYWREkpqOJiW0kagStzPNMOc6QB0UH7+SoMeY79kZ3D1DaMA6h7K0zZdpAfIHo8M1QqKGGmRkt+HGMA+0U2BpSqh9a99djmOKMgukMGdGRlW+i3a4H37UWWpjXBrDbM6osEpS2MqsvkxQRaLhihNaNTZnpXIit1OpjvrjtZd0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB3TCCAUagAwIBAgIQSb6WYT8flItHai3fJ9thTDANBgkqhkiG9w0BAQUFADAtMSswKQYDVQQDHiIASQBFAFMARwBVAEEAUgBBAFwARABBAE0AMgBBAGwAdQAxMB4XDTIxMTExMDEyMjU1MVoXDTIyMTExMDE4MjU1MVowLTErMCkGA1UEAx4iAEkARQBTAEcAVQBBAFIAQQBcAEQAQQBNADIAQQBsAHUAMTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAu5nYWREkpqOJiW0kagStzPNMOc6QB0UH7+SoMeY79kZ3D1DaMA6h7K0zZdpAfIHo8M1QqKGGmRkt+HGMA+0U2BpSqh9a99djmOKMgukMGdGRlW+i3a4H37UWWpjXBrDbM6osEpS2MqsvkxQRaLhihNaNTZnpXIit1OpjvrjtZd0CAwEAATANBgkqhkiG9w0BAQUFAAOBgQA6Rmd9QT9xdDNeJTklEdVzczZE00VSa2ULI1kNvHX4qahweawPGYgFwaBnQZuQ1E3U246oONK9kqxpJBewirBruFQOZ72azOhq2gtiEvQKr/Wge8X3+KjL08hy4PeIIB9wA0Fuifjfxzb0VEeWTg+Qiln1vOwEWYldVQURejf0Zg==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
