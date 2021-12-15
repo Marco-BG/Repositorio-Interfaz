@@ -1,0 +1,13 @@
+C:\Users\DAM2Alu1\source\repos\GraficosPDF\GraficosPDF\bin\Debug\Neptuno.mdb
+C:\Users\DAM2Alu1\source\repos\GraficosPDF\GraficosPDF\bin\Debug\GraficosPDF.exe.config
+C:\Users\DAM2Alu1\source\repos\GraficosPDF\GraficosPDF\bin\Debug\GraficosPDF.exe
+C:\Users\DAM2Alu1\source\repos\GraficosPDF\GraficosPDF\bin\Debug\GraficosPDF.pdb
+C:\Users\DAM2Alu1\source\repos\GraficosPDF\GraficosPDF\bin\Debug\GraficosPDF.xml
+C:\Users\DAM2Alu1\source\repos\GraficosPDF\GraficosPDF\obj\Debug\GraficosPDF.vbproj.AssemblyReference.cache
+C:\Users\DAM2Alu1\source\repos\GraficosPDF\GraficosPDF\obj\Debug\GraficosPDF.Form1.resources
+C:\Users\DAM2Alu1\source\repos\GraficosPDF\GraficosPDF\obj\Debug\GraficosPDF.Resources.resources
+C:\Users\DAM2Alu1\source\repos\GraficosPDF\GraficosPDF\obj\Debug\GraficosPDF.vbproj.GenerateResource.cache
+C:\Users\DAM2Alu1\source\repos\GraficosPDF\GraficosPDF\obj\Debug\GraficosPDF.vbproj.CoreCompileInputs.cache
+C:\Users\DAM2Alu1\source\repos\GraficosPDF\GraficosPDF\obj\Debug\GraficosPDF.exe
+C:\Users\DAM2Alu1\source\repos\GraficosPDF\GraficosPDF\obj\Debug\GraficosPDF.xml
+C:\Users\DAM2Alu1\source\repos\GraficosPDF\GraficosPDF\obj\Debug\GraficosPDF.pdb

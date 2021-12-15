@@ -1,0 +1,231 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+GraficosPDF
+</name>
+</assembly>
+<members>
+<member name="T:GraficosPDF.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:GraficosPDF.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:GraficosPDF.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.CategoríasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.ClientesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.Compañías_de_envíosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.Detalles_de_pedidosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.EmpleadosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.PedidosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.ProductosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.ProveedoresDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.CategoríasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.ClientesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.Compañías_de_envíosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.Detalles_de_pedidosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.EmpleadosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.PedidosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.ProductosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.ProveedoresRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.CategoríasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.ClientesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.Compañías_de_envíosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.Detalles_de_pedidosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.EmpleadosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.PedidosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.ProductosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSet.ProveedoresRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSetTableAdapters.CategoríasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSetTableAdapters.ClientesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSetTableAdapters.Compañías_de_envíosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSetTableAdapters.Detalles_de_pedidosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSetTableAdapters.EmpleadosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSetTableAdapters.PedidosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSetTableAdapters.ProductosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSetTableAdapters.ProveedoresTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:GraficosPDF.NeptunoDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(GraficosPDF.NeptunoDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:GraficosPDF.NeptunoDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(GraficosPDF.NeptunoDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:GraficosPDF.NeptunoDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(GraficosPDF.NeptunoDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:GraficosPDF.NeptunoDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:GraficosPDF.NeptunoDataSetTableAdapters.TableAdapterManager.UpdateAll(GraficosPDF.NeptunoDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:GraficosPDF.NeptunoDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>
