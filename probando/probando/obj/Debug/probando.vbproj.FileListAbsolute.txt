@@ -1,0 +1,12 @@
+C:\Users\Marco Alonso Benegas\source\repos\probando\probando\bin\Debug\probando.exe.config
+C:\Users\Marco Alonso Benegas\source\repos\probando\probando\bin\Debug\probando.exe
+C:\Users\Marco Alonso Benegas\source\repos\probando\probando\bin\Debug\probando.pdb
+C:\Users\Marco Alonso Benegas\source\repos\probando\probando\bin\Debug\probando.xml
+C:\Users\Marco Alonso Benegas\source\repos\probando\probando\obj\Debug\probando.vbproj.AssemblyReference.cache
+C:\Users\Marco Alonso Benegas\source\repos\probando\probando\obj\Debug\probando.Form1.resources
+C:\Users\Marco Alonso Benegas\source\repos\probando\probando\obj\Debug\probando.Resources.resources
+C:\Users\Marco Alonso Benegas\source\repos\probando\probando\obj\Debug\probando.vbproj.GenerateResource.cache
+C:\Users\Marco Alonso Benegas\source\repos\probando\probando\obj\Debug\probando.vbproj.CoreCompileInputs.cache
+C:\Users\Marco Alonso Benegas\source\repos\probando\probando\obj\Debug\probando.exe
+C:\Users\Marco Alonso Benegas\source\repos\probando\probando\obj\Debug\probando.xml
+C:\Users\Marco Alonso Benegas\source\repos\probando\probando\obj\Debug\probando.pdb
