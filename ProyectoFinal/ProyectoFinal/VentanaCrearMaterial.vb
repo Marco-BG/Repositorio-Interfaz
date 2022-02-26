@@ -12,11 +12,7 @@ Public Class VentanaCrearMaterial
 
     Private Sub VentanaCrearMaterial_Load(sender As Object, e As EventArgs) Handles Me.Load
         cargarPrimerValorSubCategoria()
-
-        textBoxRegistro.Text = "1"
-        textBoxRegistro.Enabled = False
-
-        MessageBox.Show(textBoxRegistro.Text)
+        updateNumberMaterial()
     End Sub
 
     Private Sub cargarPrimerValorSubCategoria()
@@ -28,6 +24,29 @@ Public Class VentanaCrearMaterial
 
         inicio.Show()
         Me.Close()
+    End Sub
+
+    Private Sub updateNumberMaterial()
+        Dim conn As New SqlConnection
+        Dim cmd As New SqlCommand
+
+        textBoxRegistro.Enabled = False
+
+        conn.ConnectionString = MiConexionString
+        conn.Open()
+
+        cmd.Connection = conn
+
+        Dim consultNumRegister As String = "select max(num_mat) from Materiales"
+
+        Dim comandSelect As SqlCommand = New SqlCommand(consultNumRegister, conn)
+
+
+        Dim numRegister As SqlDataReader = comandSelect.ExecuteReader()
+
+        If numRegister.Read Then
+            textBoxRegistro.Text = numRegister(0) + 1
+        End If
     End Sub
 
     Private Sub comboBoxCategoria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comboBoxCategoria.SelectedIndexChanged
@@ -90,9 +109,17 @@ Public Class VentanaCrearMaterial
         Dim conn As New SqlConnection
         Dim cmd As New SqlCommand
 
+        Dim valorSeccion
+
         'MessageBox.Show(comboBoxCategoria.SelectedItem.ToString())
         'MessageBox.Show(comboBoxSubCategoria.SelectedItem.ToString())
         'MessageBox.Show(tiempoFechaRegistro.Text)
+
+        For Each seccion As RadioButton In groupBoxSeccion.Controls
+            If seccion.Checked Then
+                valorSeccion = seccion.Text
+            End If
+        Next
 
         Try
             conn.ConnectionString = MiConexionString
@@ -100,13 +127,23 @@ Public Class VentanaCrearMaterial
 
             cmd.Connection = conn
 
-            Dim insertame As String = "insert into Materiales values ('" + textBoxRegistro.Text + "', '" + textBoxMaterial.Text.ToString() + "', '" + comboBoxCategoria.SelectedItem.ToString() + "', '" + comboBoxSubCategoria.SelectedItem.ToString() + "', '" + tiempoFechaRegistro.Text.ToString() + "', '" + textBoxDescripcion.Text.ToString() + "', '" + textBoxCompra.Text.ToString() + "','" + textBoxVenta.Text.ToString() + "')"
-            cmd.CommandText = insertame
+            Dim insertTable1 As String = "insert into Materiales values ('" + textBoxRegistro.Text + "', '" + textBoxMaterial.Text.ToString() + "', '" + comboBoxCategoria.SelectedItem.ToString() + "', '" + comboBoxSubCategoria.SelectedItem.ToString() + "', '" + tiempoFechaRegistro.Text.ToString() + "', '" + textBoxDescripcion.Text.ToString() + "', '" + textBoxCompra.Text.ToString() + "','" + textBoxVenta.Text.ToString() + "')"
+            cmd.CommandText = insertTable1
 
-            MessageBox.Show(cmd.ExecuteNonQuery())
+            cmd.ExecuteNonQuery()
+
+            Dim insertTable2 As String = "insert into Gest_Materiales values ('" + textBoxRegistro.Text + "', '" + comboBoxPasillo.SelectedItem.ToString() + "', '" + valorSeccion + "', '" + textBoxStock.Text + "')"
+            cmd.CommandText = insertTable2
+
+            cmd.ExecuteNonQuery()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
+        Finally
+            updateNumberMaterial()
         End Try
+
+
+
     End Sub
 End Class
 
