@@ -29,8 +29,8 @@ Public Class VentanaEliminarMaterial
         If datosSelect.HasRows Then
             datosSelect.Read()
             'MessageBox.Show(CStr(CInt(datosSelect.GetInt32(0))) + " " + datosSelect.GetString(1))
-            VentanaConfirmacionEliminar.TextBox1.Text = CStr(CInt(datosSelect.GetInt32(0)))
-            VentanaConfirmacionEliminar.TextBox2.Text = datosSelect.GetString(1)
+            VentanaConfirmacionEliminar.textBoxNumBorrar.Text = CStr(CInt(datosSelect.GetInt32(0)))
+            VentanaConfirmacionEliminar.textBoxMaterialBorrar.Text = datosSelect.GetString(1)
 
             VentanaConfirmacionEliminar.Show()
         End If

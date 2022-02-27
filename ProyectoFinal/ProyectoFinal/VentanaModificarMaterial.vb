@@ -64,15 +64,15 @@ Public Class VentanaModificarMaterial
 
 
 
-            comboBoxPasillo.Text = CStr(CInt(datosSelect.GetInt32(2)))
-                textBoxMaterial.Text = datosSelect.GetString(3)
+            comboBoxPasillo.Text = CStr(CInt(datosSelect.GetInt32(0)))
+            textBoxMaterial.Text = datosSelect.GetString(3)
             comboBoxCategoria.Text = categoria
             comboBoxSubCategoria.Text = datosSelect.GetString(5)
                 fechaRegistro.Text = datosSelect.GetDateTime(6)
                 textBoxDescripcion.Text = datosSelect.GetString(7)
                 textBoxCompra.Text = datosSelect.GetSqlMoney(8)
             textBoxVenta.Text = datosSelect.GetSqlMoney(9)
-            textBoxStock.Text = CStr(CInt(datosSelect.GetInt32(0)))
+            textBoxStock.Text = CStr(CInt(datosSelect.GetInt32(2)))
 
 
         End If
@@ -121,7 +121,7 @@ Public Class VentanaModificarMaterial
 
         cmd.Parameters.Add("@material", SqlDbType.VarChar).Value = textBoxMaterial.Text
         cmd.Parameters.Add("@categoria", SqlDbType.VarChar).Value = comboBoxCategoria.SelectedItem.ToString()
-        cmd.Parameters.Add("@subCategoria", SqlDbType.VarChar).Value = comboBoxSubCategoria.SelectedItem.ToString()
+        cmd.Parameters.Add("@subCategoria", SqlDbType.VarChar).Value = comboBoxSubCategoria.Text
         cmd.Parameters.Add("@fechaRegistro", SqlDbType.DateTime).Value = fechaRegistro.Text
         cmd.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = textBoxDescripcion.Text
         cmd.Parameters.Add("@importeCompra", SqlDbType.Money).Value = textBoxCompra.Text
@@ -132,7 +132,7 @@ Public Class VentanaModificarMaterial
         cmd = New SqlCommand("UPDATE Gest_Materiales SET pas = @pasillo, sec = @seccion, stock = @stock WHERE num_mat = @numeroMaterial", conn)
         cmd.CommandType = CommandType.Text
 
-        cmd.Parameters.Add("@pasillo", SqlDbType.VarChar).Value = comboBoxPasillo.SelectedItem.ToString()
+        cmd.Parameters.Add("@pasillo", SqlDbType.VarChar).Value = comboBoxPasillo.Text
         cmd.Parameters.Add("@seccion", SqlDbType.VarChar).Value = valorSeccion
         cmd.Parameters.Add("@stock", SqlDbType.Int).Value = textBoxStock.Text
         cmd.Parameters.Add("@numeroMaterial", SqlDbType.Int).Value = textBoxRegistro.Text

@@ -25,8 +25,8 @@ Partial Class VentanaConfirmacionEliminar
         Me.labelTextoConfirma = New System.Windows.Forms.Label()
         Me.labelNumeroMaterial = New System.Windows.Forms.Label()
         Me.labelMaterial = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.textBoxNumBorrar = New System.Windows.Forms.TextBox()
+        Me.textBoxMaterialBorrar = New System.Windows.Forms.TextBox()
         Me.buttonSi = New System.Windows.Forms.Button()
         Me.buttonCancelar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -58,21 +58,21 @@ Partial Class VentanaConfirmacionEliminar
         Me.labelMaterial.TabIndex = 2
         Me.labelMaterial.Text = "Material:"
         '
-        'TextBox1
+        'textBoxNumBorrar
         '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(160, 74)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.textBoxNumBorrar.Enabled = False
+        Me.textBoxNumBorrar.Location = New System.Drawing.Point(160, 74)
+        Me.textBoxNumBorrar.Name = "textBoxNumBorrar"
+        Me.textBoxNumBorrar.Size = New System.Drawing.Size(100, 20)
+        Me.textBoxNumBorrar.TabIndex = 3
         '
-        'TextBox2
+        'textBoxMaterialBorrar
         '
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(160, 97)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.textBoxMaterialBorrar.Enabled = False
+        Me.textBoxMaterialBorrar.Location = New System.Drawing.Point(160, 97)
+        Me.textBoxMaterialBorrar.Name = "textBoxMaterialBorrar"
+        Me.textBoxMaterialBorrar.Size = New System.Drawing.Size(100, 20)
+        Me.textBoxMaterialBorrar.TabIndex = 4
         '
         'buttonSi
         '
@@ -99,8 +99,8 @@ Partial Class VentanaConfirmacionEliminar
         Me.ClientSize = New System.Drawing.Size(576, 257)
         Me.Controls.Add(Me.buttonCancelar)
         Me.Controls.Add(Me.buttonSi)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.textBoxMaterialBorrar)
+        Me.Controls.Add(Me.textBoxNumBorrar)
         Me.Controls.Add(Me.labelMaterial)
         Me.Controls.Add(Me.labelNumeroMaterial)
         Me.Controls.Add(Me.labelTextoConfirma)
@@ -114,8 +114,8 @@ Partial Class VentanaConfirmacionEliminar
     Friend WithEvents labelTextoConfirma As Label
     Friend WithEvents labelNumeroMaterial As Label
     Friend WithEvents labelMaterial As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents textBoxNumBorrar As TextBox
+    Friend WithEvents textBoxMaterialBorrar As TextBox
     Friend WithEvents buttonSi As Button
     Friend WithEvents buttonCancelar As Button
 End Class
