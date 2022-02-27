@@ -22,5 +22,90 @@ ProyectoFinal
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="T:ProyectoFinal.DBMaterialesDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:ProyectoFinal.DBMaterialesDataSet.Gest_MaterialesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoFinal.DBMaterialesDataSet.MaterialesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoFinal.DBMaterialesDataSet.Gest_MaterialesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoFinal.DBMaterialesDataSet.MaterialesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoFinal.DBMaterialesDataSet.Gest_MaterialesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoFinal.DBMaterialesDataSet.MaterialesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoFinal.DBMaterialesDataSetTableAdapters.Gest_MaterialesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoFinal.DBMaterialesDataSetTableAdapters.MaterialesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoFinal.DBMaterialesDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:ProyectoFinal.DBMaterialesDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(ProyectoFinal.DBMaterialesDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:ProyectoFinal.DBMaterialesDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(ProyectoFinal.DBMaterialesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:ProyectoFinal.DBMaterialesDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(ProyectoFinal.DBMaterialesDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:ProyectoFinal.DBMaterialesDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:ProyectoFinal.DBMaterialesDataSetTableAdapters.TableAdapterManager.UpdateAll(ProyectoFinal.DBMaterialesDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:ProyectoFinal.DBMaterialesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:ProyectoFinal.DBMaterialesDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 </members>
 </doc>

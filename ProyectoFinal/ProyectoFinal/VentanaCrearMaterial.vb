@@ -3,21 +3,21 @@ Imports System.IO
 
 Public Class VentanaCrearMaterial
 
-
-    Dim directorioDebug As String = Directory.GetCurrentDirectory()
-    Dim directorioBin As DirectoryInfo = Directory.GetParent(directorioDebug)
-    Dim directorio As DirectoryInfo = Directory.GetParent(directorioBin.ToString())
-
-    Dim MiConexionString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" & directorio.ToString() & "\DBMateriales.mdf;Integrated Security=True"
-
     Private Sub VentanaCrearMaterial_Load(sender As Object, e As EventArgs) Handles Me.Load
         cargarPrimerValorSubCategoria()
+
         updateNumberMaterial()
     End Sub
 
     Private Sub cargarPrimerValorSubCategoria()
         comboBoxSubCategoria.Text = comboBoxSubCategoria.Items(0)
 
+    End Sub
+    Private Sub cleanAllTextBox()
+        textBoxMaterial.Clear()
+        textBoxDescripcion.Clear()
+        textBoxCompra.Clear()
+        textBoxStock.Clear()
     End Sub
     Private Sub buttonRegresar_Click(sender As Object, e As EventArgs) Handles buttonRegresar.Click
         Dim inicio As New Form1
@@ -41,12 +41,15 @@ Public Class VentanaCrearMaterial
 
         Dim comandSelect As SqlCommand = New SqlCommand(consultNumRegister, conn)
 
-
         Dim numRegister As SqlDataReader = comandSelect.ExecuteReader()
 
-        If numRegister.Read Then
-            textBoxRegistro.Text = numRegister(0) + 1
-        End If
+        Try
+            If numRegister.Read Then
+                textBoxRegistro.Text = numRegister(0) + 1
+            End If
+        Catch ex As Exception
+            textBoxRegistro.Text = 1
+        End Try
     End Sub
 
     Private Sub comboBoxCategoria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comboBoxCategoria.SelectedIndexChanged
@@ -83,9 +86,6 @@ Public Class VentanaCrearMaterial
     End Sub
 
     Private Sub textBoxCompra_TextChanged(sender As Object, e As EventArgs) Handles textBoxCompra.TextChanged
-
-
-
         If textBoxCompra.Text.Length < 1 Then
             Exit Sub
         Else
@@ -100,9 +100,6 @@ Public Class VentanaCrearMaterial
                 textBoxVenta.Text = CStr(calculo)
             End If
         End If
-
-
-
     End Sub
 
     Private Sub buttonInsertar_Click(sender As Object, e As EventArgs) Handles buttonInsertar.Click
@@ -122,13 +119,21 @@ Public Class VentanaCrearMaterial
         Next
 
         Try
-            conn.ConnectionString = MiConexionString
+            conn.ConnectionString = miConexionString
             conn.Open()
 
             cmd.Connection = conn
+            cmd = New SqlCommand("INSERT INTO Materiales VALUES(@numRegistro, @material, @categoria, @subCategoria, @fechaRegistro, @descripcion, @importeCompra, @importeVenta)", conn)
+            cmd.CommandType = CommandType.Text
 
-            Dim insertTable1 As String = "insert into Materiales values ('" + textBoxRegistro.Text + "', '" + textBoxMaterial.Text.ToString() + "', '" + comboBoxCategoria.SelectedItem.ToString() + "', '" + comboBoxSubCategoria.SelectedItem.ToString() + "', '" + tiempoFechaRegistro.Text.ToString() + "', '" + textBoxDescripcion.Text.ToString() + "', '" + textBoxCompra.Text.ToString() + "','" + textBoxVenta.Text.ToString() + "')"
-            cmd.CommandText = insertTable1
+            cmd.Parameters.Add("@numRegistro", SqlDbType.Int).Value = textBoxRegistro.Text
+            cmd.Parameters.Add("@material", SqlDbType.VarChar).Value = textBoxMaterial.Text
+            cmd.Parameters.Add("@categoria", SqlDbType.VarChar).Value = comboBoxCategoria.SelectedItem.ToString()
+            cmd.Parameters.Add("@subCategoria", SqlDbType.VarChar).Value = comboBoxSubCategoria.SelectedItem.ToString()
+            cmd.Parameters.Add("@fechaRegistro", SqlDbType.DateTime).Value = tiempoFechaRegistro.Text.ToString()
+            cmd.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = textBoxDescripcion.Text
+            cmd.Parameters.Add("@importeCompra", SqlDbType.Money).Value = textBoxCompra.Text
+            cmd.Parameters.Add("@importeVenta", SqlDbType.Money).Value = textBoxVenta.Text
 
             cmd.ExecuteNonQuery()
 
@@ -140,10 +145,7 @@ Public Class VentanaCrearMaterial
             MessageBox.Show(ex.Message)
         Finally
             updateNumberMaterial()
+            cleanAllTextBox()
         End Try
-
-
-
     End Sub
 End Class
-

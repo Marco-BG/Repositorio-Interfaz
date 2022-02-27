@@ -52,3 +52,4 @@ C:\Users\Marco Alonso Benegas\OneDrive\Escritorio\Repositorios Curso\Repositorio
 C:\Users\Marco Alonso Benegas\OneDrive\Escritorio\Repositorios Curso\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
 C:\Users\Marco Alonso Benegas\OneDrive\Escritorio\Repositorios Curso\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.xml
 C:\Users\Marco Alonso Benegas\OneDrive\Escritorio\Repositorios Curso\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+C:\Users\Marco Alonso Benegas\OneDrive\Escritorio\Repositorios Curso\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VentanaConfirmacionEliminar.resources

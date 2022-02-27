@@ -24,6 +24,8 @@ Partial Class VentanaCrearMaterial
     Private Sub InitializeComponent()
         Me.buttonRegresar = New System.Windows.Forms.Button()
         Me.grupBoxCampos = New System.Windows.Forms.GroupBox()
+        Me.labelDescripcion = New System.Windows.Forms.Label()
+        Me.textBoxDescripcion = New System.Windows.Forms.TextBox()
         Me.comboBoxPasillo = New System.Windows.Forms.ComboBox()
         Me.labelPasillo = New System.Windows.Forms.Label()
         Me.textBoxCompra = New System.Windows.Forms.TextBox()
@@ -41,17 +43,15 @@ Partial Class VentanaCrearMaterial
         Me.textBoxRegistro = New System.Windows.Forms.TextBox()
         Me.labelNumeroRegistro = New System.Windows.Forms.Label()
         Me.groupBoxSeccion = New System.Windows.Forms.GroupBox()
+        Me.radioButtonF = New System.Windows.Forms.RadioButton()
+        Me.radioButtonE = New System.Windows.Forms.RadioButton()
+        Me.radioButtonD = New System.Windows.Forms.RadioButton()
         Me.radioButtonC = New System.Windows.Forms.RadioButton()
         Me.radioButtonB = New System.Windows.Forms.RadioButton()
         Me.radioButtonA = New System.Windows.Forms.RadioButton()
         Me.labelStock = New System.Windows.Forms.Label()
         Me.textBoxStock = New System.Windows.Forms.TextBox()
-        Me.radioButtonD = New System.Windows.Forms.RadioButton()
-        Me.radioButtonE = New System.Windows.Forms.RadioButton()
-        Me.radioButtonF = New System.Windows.Forms.RadioButton()
         Me.buttonInsertar = New System.Windows.Forms.Button()
-        Me.textBoxDescripcion = New System.Windows.Forms.TextBox()
-        Me.labelDescripcion = New System.Windows.Forms.Label()
         Me.grupBoxCampos.SuspendLayout()
         Me.groupBoxSeccion.SuspendLayout()
         Me.SuspendLayout()
@@ -91,6 +91,23 @@ Partial Class VentanaCrearMaterial
         Me.grupBoxCampos.TabIndex = 1
         Me.grupBoxCampos.TabStop = False
         Me.grupBoxCampos.Text = "Material"
+        '
+        'labelDescripcion
+        '
+        Me.labelDescripcion.AutoSize = True
+        Me.labelDescripcion.Location = New System.Drawing.Point(9, 225)
+        Me.labelDescripcion.Name = "labelDescripcion"
+        Me.labelDescripcion.Size = New System.Drawing.Size(66, 13)
+        Me.labelDescripcion.TabIndex = 18
+        Me.labelDescripcion.Text = "Descripción:"
+        '
+        'textBoxDescripcion
+        '
+        Me.textBoxDescripcion.Location = New System.Drawing.Point(112, 209)
+        Me.textBoxDescripcion.Multiline = True
+        Me.textBoxDescripcion.Name = "textBoxDescripcion"
+        Me.textBoxDescripcion.Size = New System.Drawing.Size(148, 51)
+        Me.textBoxDescripcion.TabIndex = 17
         '
         'comboBoxPasillo
         '
@@ -247,6 +264,36 @@ Partial Class VentanaCrearMaterial
         Me.groupBoxSeccion.TabStop = False
         Me.groupBoxSeccion.Text = "Sección"
         '
+        'radioButtonF
+        '
+        Me.radioButtonF.AutoSize = True
+        Me.radioButtonF.Location = New System.Drawing.Point(104, 68)
+        Me.radioButtonF.Name = "radioButtonF"
+        Me.radioButtonF.Size = New System.Drawing.Size(31, 17)
+        Me.radioButtonF.TabIndex = 5
+        Me.radioButtonF.Text = "F"
+        Me.radioButtonF.UseVisualStyleBackColor = True
+        '
+        'radioButtonE
+        '
+        Me.radioButtonE.AutoSize = True
+        Me.radioButtonE.Location = New System.Drawing.Point(104, 45)
+        Me.radioButtonE.Name = "radioButtonE"
+        Me.radioButtonE.Size = New System.Drawing.Size(32, 17)
+        Me.radioButtonE.TabIndex = 4
+        Me.radioButtonE.Text = "E"
+        Me.radioButtonE.UseVisualStyleBackColor = True
+        '
+        'radioButtonD
+        '
+        Me.radioButtonD.AutoSize = True
+        Me.radioButtonD.Location = New System.Drawing.Point(104, 20)
+        Me.radioButtonD.Name = "radioButtonD"
+        Me.radioButtonD.Size = New System.Drawing.Size(33, 17)
+        Me.radioButtonD.TabIndex = 3
+        Me.radioButtonD.Text = "D"
+        Me.radioButtonD.UseVisualStyleBackColor = True
+        '
         'radioButtonC
         '
         Me.radioButtonC.AutoSize = True
@@ -254,7 +301,6 @@ Partial Class VentanaCrearMaterial
         Me.radioButtonC.Name = "radioButtonC"
         Me.radioButtonC.Size = New System.Drawing.Size(32, 17)
         Me.radioButtonC.TabIndex = 2
-        Me.radioButtonC.TabStop = True
         Me.radioButtonC.Text = "C"
         Me.radioButtonC.UseVisualStyleBackColor = True
         '
@@ -265,13 +311,13 @@ Partial Class VentanaCrearMaterial
         Me.radioButtonB.Name = "radioButtonB"
         Me.radioButtonB.Size = New System.Drawing.Size(32, 17)
         Me.radioButtonB.TabIndex = 1
-        Me.radioButtonB.TabStop = True
         Me.radioButtonB.Text = "B"
         Me.radioButtonB.UseVisualStyleBackColor = True
         '
         'radioButtonA
         '
         Me.radioButtonA.AutoSize = True
+        Me.radioButtonA.Checked = True
         Me.radioButtonA.Location = New System.Drawing.Point(7, 20)
         Me.radioButtonA.Name = "radioButtonA"
         Me.radioButtonA.Size = New System.Drawing.Size(32, 17)
@@ -296,39 +342,6 @@ Partial Class VentanaCrearMaterial
         Me.textBoxStock.Size = New System.Drawing.Size(48, 20)
         Me.textBoxStock.TabIndex = 4
         '
-        'radioButtonD
-        '
-        Me.radioButtonD.AutoSize = True
-        Me.radioButtonD.Location = New System.Drawing.Point(104, 20)
-        Me.radioButtonD.Name = "radioButtonD"
-        Me.radioButtonD.Size = New System.Drawing.Size(33, 17)
-        Me.radioButtonD.TabIndex = 3
-        Me.radioButtonD.TabStop = True
-        Me.radioButtonD.Text = "D"
-        Me.radioButtonD.UseVisualStyleBackColor = True
-        '
-        'radioButtonE
-        '
-        Me.radioButtonE.AutoSize = True
-        Me.radioButtonE.Location = New System.Drawing.Point(104, 45)
-        Me.radioButtonE.Name = "radioButtonE"
-        Me.radioButtonE.Size = New System.Drawing.Size(32, 17)
-        Me.radioButtonE.TabIndex = 4
-        Me.radioButtonE.TabStop = True
-        Me.radioButtonE.Text = "E"
-        Me.radioButtonE.UseVisualStyleBackColor = True
-        '
-        'radioButtonF
-        '
-        Me.radioButtonF.AutoSize = True
-        Me.radioButtonF.Location = New System.Drawing.Point(104, 68)
-        Me.radioButtonF.Name = "radioButtonF"
-        Me.radioButtonF.Size = New System.Drawing.Size(31, 17)
-        Me.radioButtonF.TabIndex = 5
-        Me.radioButtonF.TabStop = True
-        Me.radioButtonF.Text = "F"
-        Me.radioButtonF.UseVisualStyleBackColor = True
-        '
         'buttonInsertar
         '
         Me.buttonInsertar.Location = New System.Drawing.Point(419, 296)
@@ -337,23 +350,6 @@ Partial Class VentanaCrearMaterial
         Me.buttonInsertar.TabIndex = 5
         Me.buttonInsertar.Text = "Crear Material"
         Me.buttonInsertar.UseVisualStyleBackColor = True
-        '
-        'textBoxDescripcion
-        '
-        Me.textBoxDescripcion.Location = New System.Drawing.Point(112, 209)
-        Me.textBoxDescripcion.Multiline = True
-        Me.textBoxDescripcion.Name = "textBoxDescripcion"
-        Me.textBoxDescripcion.Size = New System.Drawing.Size(148, 51)
-        Me.textBoxDescripcion.TabIndex = 17
-        '
-        'labelDescripcion
-        '
-        Me.labelDescripcion.AutoSize = True
-        Me.labelDescripcion.Location = New System.Drawing.Point(9, 225)
-        Me.labelDescripcion.Name = "labelDescripcion"
-        Me.labelDescripcion.Size = New System.Drawing.Size(39, 13)
-        Me.labelDescripcion.TabIndex = 18
-        Me.labelDescripcion.Text = "Label2"
         '
         'VentanaCrearMaterial
         '
