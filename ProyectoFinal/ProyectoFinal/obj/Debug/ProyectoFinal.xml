@@ -37,12 +37,22 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:ProyectoFinal.DBMaterialesDataSet.DataTable1DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:ProyectoFinal.DBMaterialesDataSet.Gest_MaterialesRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:ProyectoFinal.DBMaterialesDataSet.MaterialesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoFinal.DBMaterialesDataSet.DataTable1Row">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -57,12 +67,22 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:ProyectoFinal.DBMaterialesDataSet.DataTable1RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:ProyectoFinal.DBMaterialesDataSetTableAdapters.Gest_MaterialesTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:ProyectoFinal.DBMaterialesDataSetTableAdapters.MaterialesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoFinal.DBMaterialesDataSetTableAdapters.DataTable1TableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
