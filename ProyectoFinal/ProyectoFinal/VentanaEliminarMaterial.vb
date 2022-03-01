@@ -24,15 +24,21 @@ Public Class VentanaEliminarMaterial
 
         cmd.Parameters.Add("@numero", SqlDbType.Int).Value = textBoxNumeroEliminar.Text
 
-        datosSelect = cmd.ExecuteReader()
+        Try
+            datosSelect = cmd.ExecuteReader()
+            If datosSelect.HasRows Then
+                datosSelect.Read()
+                'MessageBox.Show(CStr(CInt(datosSelect.GetInt32(0))) + " " + datosSelect.GetString(1))
+                VentanaConfirmacionEliminar.textBoxNumBorrar.Text = CStr(CInt(datosSelect.GetInt32(0)))
+                VentanaConfirmacionEliminar.textBoxMaterialBorrar.Text = datosSelect.GetString(1)
 
-        If datosSelect.HasRows Then
-            datosSelect.Read()
-            'MessageBox.Show(CStr(CInt(datosSelect.GetInt32(0))) + " " + datosSelect.GetString(1))
-            VentanaConfirmacionEliminar.textBoxNumBorrar.Text = CStr(CInt(datosSelect.GetInt32(0)))
-            VentanaConfirmacionEliminar.textBoxMaterialBorrar.Text = datosSelect.GetString(1)
+                VentanaConfirmacionEliminar.Show()
 
-            VentanaConfirmacionEliminar.Show()
-        End If
+            Else
+                MessageBox.Show("No existe el material")
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Debe introducir el id del material")
+        End Try
     End Sub
 End Class

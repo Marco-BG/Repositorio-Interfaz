@@ -141,9 +141,11 @@ Public Class VentanaCrearMaterial
             cmd.CommandText = insertTable2
 
             cmd.ExecuteNonQuery()
+            MessageBox.Show("Se ha creado el material")
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Rellene los campos")
         Finally
+
             updateNumberMaterial()
             cleanAllTextBox()
         End Try

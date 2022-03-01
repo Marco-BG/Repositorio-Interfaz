@@ -53,3 +53,22 @@ C:\Users\Marco Alonso Benegas\OneDrive\Escritorio\Repositorios Curso\Repositorio
 C:\Users\Marco Alonso Benegas\OneDrive\Escritorio\Repositorios Curso\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.xml
 C:\Users\Marco Alonso Benegas\OneDrive\Escritorio\Repositorios Curso\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
 C:\Users\Marco Alonso Benegas\OneDrive\Escritorio\Repositorios Curso\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VentanaConfirmacionEliminar.resources
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\bin\Debug\DBMateriales.mdf
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\bin\Debug\DBMateriales_log.ldf
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.xml
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.vbproj.AssemblyReference.cache
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Form1.resources
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Resources.resources
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VentanaConfirmacionEliminar.resources
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VentanaCrearMaterial.resources
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VentanaEliminarMaterial.resources
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VentanaListarMateriales.resources
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.VentanaModificarMaterial.resources
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.vbproj.GenerateResource.cache
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.vbproj.CoreCompileInputs.cache
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.xml
+C:\Users\DAM2Alu1\Desktop\Repositorios\Repositorio-Interfaz\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
