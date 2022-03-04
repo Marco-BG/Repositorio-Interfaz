@@ -131,6 +131,9 @@ Public Class VentanaModificarMaterial
 
             If textBoxRegistro.Text.Equals("") Then
                 MessageBox.Show("Debe buscar el id del material")
+
+            ElseIf textBoxMaterial.Text.Equals("") Then
+                MessageBox.Show("Rellene el campo " + labelMaterial.Text)
                 Exit Sub
             Else
                 cmdSelectNumber = New SqlCommand("SELECT num_mat FROM Materiales WHERE num_mat = @numero", conn)

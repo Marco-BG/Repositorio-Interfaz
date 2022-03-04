@@ -151,6 +151,16 @@ WHERE        (Materiales.num_mat = @numero)</CommandText>
               <Mapping SourceColumn="stock" DataSetColumn="stock" />
             </Mappings>
             <Sources>
+              <DbSource ConnectionRef="DBMaterialesConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillAll" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillAll" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillAll">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Materiales.num_mat, Materiales.mat, Materiales.cat, Materiales.sub_cat, Materiales.fe_reg, Materiales.[desc], Materiales.imp_com, Materiales.imp_ven, Gest_Materiales.pas, Gest_Materiales.sec, Gest_Materiales.stock
+FROM            Gest_Materiales INNER JOIN
+                         Materiales ON Gest_Materiales.num_mat = Materiales.num_mat</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="DBMaterialesConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByFiltro" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillByFiltro" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByFiltro">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
@@ -175,7 +185,7 @@ WHERE        (Materiales.num_mat = @numero) OR (Materiales.cat = @categoria)</Co
   <xs:element name="DBMaterialesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DBMaterialesDataSet" msprop:Generator_UserDSName="DBMaterialesDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Gest_Materiales" msprop:Generator_TableClassName="Gest_MaterialesDataTable" msprop:Generator_TableVarName="tableGest_Materiales" msprop:Generator_TablePropName="Gest_Materiales" msprop:Generator_RowDeletingName="Gest_MaterialesRowDeleting" msprop:Generator_RowChangingName="Gest_MaterialesRowChanging" msprop:Generator_RowEvHandlerName="Gest_MaterialesRowChangeEventHandler" msprop:Generator_RowDeletedName="Gest_MaterialesRowDeleted" msprop:Generator_UserTableName="Gest_Materiales" msprop:Generator_RowChangedName="Gest_MaterialesRowChanged" msprop:Generator_RowEvArgName="Gest_MaterialesRowChangeEvent" msprop:Generator_RowClassName="Gest_MaterialesRow">
+        <xs:element name="Gest_Materiales" msprop:Generator_TableClassName="Gest_MaterialesDataTable" msprop:Generator_TableVarName="tableGest_Materiales" msprop:Generator_RowChangedName="Gest_MaterialesRowChanged" msprop:Generator_TablePropName="Gest_Materiales" msprop:Generator_RowDeletingName="Gest_MaterialesRowDeleting" msprop:Generator_RowChangingName="Gest_MaterialesRowChanging" msprop:Generator_RowEvHandlerName="Gest_MaterialesRowChangeEventHandler" msprop:Generator_RowDeletedName="Gest_MaterialesRowDeleted" msprop:Generator_RowClassName="Gest_MaterialesRow" msprop:Generator_UserTableName="Gest_Materiales" msprop:Generator_RowEvArgName="Gest_MaterialesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="num_mat" msprop:Generator_ColumnVarNameInTable="columnnum_mat" msprop:Generator_ColumnPropNameInRow="num_mat" msprop:Generator_ColumnPropNameInTable="num_matColumn" msprop:Generator_UserColumnName="num_mat" type="xs:int" />
@@ -191,7 +201,7 @@ WHERE        (Materiales.num_mat = @numero) OR (Materiales.cat = @categoria)</Co
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Materiales" msprop:Generator_TableClassName="MaterialesDataTable" msprop:Generator_TableVarName="tableMateriales" msprop:Generator_TablePropName="Materiales" msprop:Generator_RowDeletingName="MaterialesRowDeleting" msprop:Generator_RowChangingName="MaterialesRowChanging" msprop:Generator_RowEvHandlerName="MaterialesRowChangeEventHandler" msprop:Generator_RowDeletedName="MaterialesRowDeleted" msprop:Generator_UserTableName="Materiales" msprop:Generator_RowChangedName="MaterialesRowChanged" msprop:Generator_RowEvArgName="MaterialesRowChangeEvent" msprop:Generator_RowClassName="MaterialesRow">
+        <xs:element name="Materiales" msprop:Generator_TableClassName="MaterialesDataTable" msprop:Generator_TableVarName="tableMateriales" msprop:Generator_RowChangedName="MaterialesRowChanged" msprop:Generator_TablePropName="Materiales" msprop:Generator_RowDeletingName="MaterialesRowDeleting" msprop:Generator_RowChangingName="MaterialesRowChanging" msprop:Generator_RowEvHandlerName="MaterialesRowChangeEventHandler" msprop:Generator_RowDeletedName="MaterialesRowDeleted" msprop:Generator_RowClassName="MaterialesRow" msprop:Generator_UserTableName="Materiales" msprop:Generator_RowEvArgName="MaterialesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="num_mat" msprop:Generator_ColumnVarNameInTable="columnnum_mat" msprop:Generator_ColumnPropNameInRow="num_mat" msprop:Generator_ColumnPropNameInTable="num_matColumn" msprop:Generator_UserColumnName="num_mat" type="xs:int" />
@@ -229,7 +239,7 @@ WHERE        (Materiales.num_mat = @numero) OR (Materiales.cat = @categoria)</Co
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="num_mat" msprop:Generator_ColumnVarNameInTable="columnnum_mat" msprop:Generator_ColumnPropNameInRow="num_mat" msprop:Generator_ColumnPropNameInTable="num_matColumn" msprop:Generator_UserColumnName="num_mat" type="xs:int" />
@@ -289,8 +299,8 @@ WHERE        (Materiales.num_mat = @numero) OR (Materiales.cat = @categoria)</Co
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__Gest_Mate__num_m__37A5467C" msdata:parent="Materiales" msdata:child="Gest_Materiales" msdata:parentkey="num_mat" msdata:childkey="num_mat" msprop:Generator_UserChildTable="Gest_Materiales" msprop:Generator_ChildPropName="GetGest_MaterialesRows" msprop:Generator_UserRelationName="FK__Gest_Mate__num_m__37A5467C" msprop:Generator_RelationVarName="relationFK__Gest_Mate__num_m__37A5467C" msprop:Generator_UserParentTable="Materiales" msprop:Generator_ParentPropName="MaterialesRow" />
-      <msdata:Relationship name="FK__Gest_Mate__num_m__37A5467C1" msdata:parent="Materiales" msdata:child="DataTable1" msdata:parentkey="num_mat" msdata:childkey="num_mat" msprop:Generator_UserChildTable="DataTable1" msprop:Generator_ChildPropName="GetDataTable1Rows" msprop:Generator_UserRelationName="FK__Gest_Mate__num_m__37A5467C1" msprop:Generator_ParentPropName="MaterialesRow" msprop:Generator_RelationVarName="relationFK__Gest_Mate__num_m__37A5467C1" msprop:Generator_UserParentTable="Materiales" />
+      <msdata:Relationship name="FK__Gest_Mate__num_m__37A5467C" msdata:parent="Materiales" msdata:child="Gest_Materiales" msdata:parentkey="num_mat" msdata:childkey="num_mat" msprop:Generator_UserChildTable="Gest_Materiales" msprop:Generator_ChildPropName="GetGest_MaterialesRows" msprop:Generator_UserRelationName="FK__Gest_Mate__num_m__37A5467C" msprop:Generator_ParentPropName="MaterialesRow" msprop:Generator_RelationVarName="relationFK__Gest_Mate__num_m__37A5467C" msprop:Generator_UserParentTable="Materiales" />
+      <msdata:Relationship name="FK__Gest_Mate__num_m__37A5467C1" msdata:parent="Materiales" msdata:child="DataTable1" msdata:parentkey="num_mat" msdata:childkey="num_mat" msprop:Generator_UserChildTable="DataTable1" msprop:Generator_ChildPropName="GetDataTable1Rows" msprop:Generator_UserRelationName="FK__Gest_Mate__num_m__37A5467C1" msprop:Generator_RelationVarName="relationFK__Gest_Mate__num_m__37A5467C1" msprop:Generator_UserParentTable="Materiales" msprop:Generator_ParentPropName="MaterialesRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

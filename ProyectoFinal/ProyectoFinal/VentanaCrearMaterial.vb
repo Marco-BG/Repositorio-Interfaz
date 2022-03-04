@@ -19,7 +19,7 @@ Public Class VentanaCrearMaterial
         textBoxCompra.Clear()
         textBoxStock.Clear()
     End Sub
-    Private Sub buttonRegresar_Click(sender As Object, e As EventArgs) Handles buttonRegresar.Click
+    Private Sub buttonRegresar_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
         Dim inicio As New Form1
 
         inicio.Show()
@@ -102,7 +102,7 @@ Public Class VentanaCrearMaterial
         End If
     End Sub
 
-    Private Sub buttonInsertar_Click(sender As Object, e As EventArgs) Handles buttonInsertar.Click
+    Private Sub toolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         Dim conn As New SqlConnection
         Dim cmd As New SqlCommand
 
@@ -123,6 +123,7 @@ Public Class VentanaCrearMaterial
             conn.Open()
 
             cmd.Connection = conn
+
             cmd = New SqlCommand("INSERT INTO Materiales VALUES(@numRegistro, @material, @categoria, @subCategoria, @fechaRegistro, @descripcion, @importeCompra, @importeVenta)", conn)
             cmd.CommandType = CommandType.Text
 
@@ -141,13 +142,49 @@ Public Class VentanaCrearMaterial
             cmd.CommandText = insertTable2
 
             cmd.ExecuteNonQuery()
+
             MessageBox.Show("Se ha creado el material")
         Catch ex As Exception
-            MessageBox.Show("Rellene los campos")
+            MessageBox.Show("Debe rellenar los campos")
         Finally
 
             updateNumberMaterial()
             cleanAllTextBox()
         End Try
     End Sub
+
+    Private Sub InicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InicioToolStripMenuItem.Click
+        mostrarVentanaInicio()
+        Me.Close()
+    End Sub
+
+    Private Sub ModificarMaterialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarMaterialToolStripMenuItem.Click
+        mostrarVentanaModificar()
+        Me.Close()
+    End Sub
+
+    Private Sub ListarMaterialesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarMaterialesToolStripMenuItem.Click
+        mostrarVentanaListar()
+        Me.Close()
+    End Sub
+
+    Private Sub EliminarMaterialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarMaterialToolStripMenuItem.Click
+        mostrarVentanaEliminar()
+        Me.Close()
+    End Sub
+
+    Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
+        Me.Close()
+    End Sub
+
+    Private Sub cargaTabla()
+        Dim conn As New SqlConnection
+        Dim cmd As New SqlCommand
+
+        conn.ConnectionString = miConexionString
+
+        cmd = New SqlCommand("SELECT Materiales.num_mat, Materiales.mat, Materiales.cat, Materiales.sub_cat, Materiales.fe_reg, Materiales.[desc], Materiales.imp_com, Materiales.imp_ven, Gest_Materiales.pas, Gest_Materiales.sec, Gest_Materiales.stock
+                    FROM Gest_Materiales INNER JOIN Materiales ON Gest_Materiales.num_mat = Materiales.num_mat")
+    End Sub
+
 End Class

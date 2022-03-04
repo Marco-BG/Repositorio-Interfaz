@@ -34,9 +34,9 @@ Partial Class VentanaConfirmacionEliminar
         'labelTextoConfirma
         '
         Me.labelTextoConfirma.AutoSize = True
-        Me.labelTextoConfirma.Location = New System.Drawing.Point(179, 25)
+        Me.labelTextoConfirma.Location = New System.Drawing.Point(141, 26)
         Me.labelTextoConfirma.Name = "labelTextoConfirma"
-        Me.labelTextoConfirma.Size = New System.Drawing.Size(226, 13)
+        Me.labelTextoConfirma.Size = New System.Drawing.Size(289, 13)
         Me.labelTextoConfirma.TabIndex = 0
         Me.labelTextoConfirma.Text = "¿Estas seguro que quieres eliminar el material?"
         '
@@ -45,7 +45,7 @@ Partial Class VentanaConfirmacionEliminar
         Me.labelNumeroMaterial.AutoSize = True
         Me.labelNumeroMaterial.Location = New System.Drawing.Point(32, 74)
         Me.labelNumeroMaterial.Name = "labelNumeroMaterial"
-        Me.labelNumeroMaterial.Size = New System.Drawing.Size(102, 13)
+        Me.labelNumeroMaterial.Size = New System.Drawing.Size(121, 13)
         Me.labelNumeroMaterial.TabIndex = 1
         Me.labelNumeroMaterial.Text = "Número de Material:"
         '
@@ -54,14 +54,14 @@ Partial Class VentanaConfirmacionEliminar
         Me.labelMaterial.AutoSize = True
         Me.labelMaterial.Location = New System.Drawing.Point(35, 105)
         Me.labelMaterial.Name = "labelMaterial"
-        Me.labelMaterial.Size = New System.Drawing.Size(47, 13)
+        Me.labelMaterial.Size = New System.Drawing.Size(61, 13)
         Me.labelMaterial.TabIndex = 2
         Me.labelMaterial.Text = "Material:"
         '
         'textBoxNumBorrar
         '
         Me.textBoxNumBorrar.Enabled = False
-        Me.textBoxNumBorrar.Location = New System.Drawing.Point(160, 74)
+        Me.textBoxNumBorrar.Location = New System.Drawing.Point(160, 71)
         Me.textBoxNumBorrar.Name = "textBoxNumBorrar"
         Me.textBoxNumBorrar.Size = New System.Drawing.Size(100, 20)
         Me.textBoxNumBorrar.TabIndex = 3
@@ -69,7 +69,7 @@ Partial Class VentanaConfirmacionEliminar
         'textBoxMaterialBorrar
         '
         Me.textBoxMaterialBorrar.Enabled = False
-        Me.textBoxMaterialBorrar.Location = New System.Drawing.Point(160, 97)
+        Me.textBoxMaterialBorrar.Location = New System.Drawing.Point(160, 102)
         Me.textBoxMaterialBorrar.Name = "textBoxMaterialBorrar"
         Me.textBoxMaterialBorrar.Size = New System.Drawing.Size(100, 20)
         Me.textBoxMaterialBorrar.TabIndex = 4
@@ -96,6 +96,7 @@ Partial Class VentanaConfirmacionEliminar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(576, 257)
         Me.Controls.Add(Me.buttonCancelar)
         Me.Controls.Add(Me.buttonSi)
@@ -104,6 +105,7 @@ Partial Class VentanaConfirmacionEliminar
         Me.Controls.Add(Me.labelMaterial)
         Me.Controls.Add(Me.labelNumeroMaterial)
         Me.Controls.Add(Me.labelTextoConfirma)
+        Me.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "VentanaConfirmacionEliminar"
         Me.Text = "VentanaConfirmacionEliminar"
         Me.ResumeLayout(False)
