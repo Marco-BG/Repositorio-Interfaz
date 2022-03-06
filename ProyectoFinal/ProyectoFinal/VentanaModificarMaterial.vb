@@ -181,13 +181,8 @@ Public Class VentanaModificarMaterial
                     End If
                 Else
                     MessageBox.Show("No existe el material")
-
                 End If
             End If
-
-
-
-
         Catch ex As SqlException
             MessageBox.Show(ex.Message)
         End Try

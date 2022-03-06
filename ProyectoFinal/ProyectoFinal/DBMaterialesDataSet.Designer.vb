@@ -2861,7 +2861,7 @@ Namespace DBMaterialesDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(2) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(3) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        Materiales.num_mat, Materiales.mat, Materiales.cat, Materiales.sub_"& _ 
@@ -2878,19 +2878,30 @@ Namespace DBMaterialesDataSetTableAdapters
                 "cat, Materiales.fe_reg, Materiales.[desc], Materiales.imp_com, Materiales.imp_ve"& _ 
                 "n, Gest_Materiales.pas, Gest_Materiales.sec, Gest_Materiales.stock"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM        "& _ 
                 "    Gest_Materiales INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Materiales ON Gest_Mate"& _ 
-                "riales.num_mat = Materiales.num_mat"
+                "riales.num_mat = Materiales.num_mat"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Materiales.cat = @categoria)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@categoria", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "cat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "SELECT        Materiales.num_mat, Materiales.mat, Materiales.cat, Materiales.sub_"& _ 
                 "cat, Materiales.fe_reg, Materiales.[desc], Materiales.imp_com, Materiales.imp_ve"& _ 
                 "n, Gest_Materiales.pas, Gest_Materiales.sec, Gest_Materiales.stock"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM        "& _ 
                 "    Gest_Materiales INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Materiales ON Gest_Mate"& _ 
-                "riales.num_mat = Materiales.num_mat"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Materiales.num_mat = @numero)"& _ 
-                " OR (Materiales.cat = @categoria)"
+                "riales.num_mat = Materiales.num_mat"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Materiales.cat = @categoria) "& _ 
+                "AND (Materiales.sub_cat = @sub)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@numero", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "num_mat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@categoria", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "cat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@sub", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "sub_cat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "SELECT        Materiales.num_mat, Materiales.mat, Materiales.cat, Materiales.sub_"& _ 
+                "cat, Materiales.fe_reg, Materiales.[desc], Materiales.imp_com, Materiales.imp_ve"& _ 
+                "n, Gest_Materiales.pas, Gest_Materiales.sec, Gest_Materiales.stock"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM        "& _ 
+                "    Gest_Materiales INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Materiales ON Gest_Mate"& _ 
+                "riales.num_mat = Materiales.num_mat"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Materiales.sub_cat = @subCate"& _ 
+                "goria)"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@subCategoria", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "sub_cat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2923,8 +2934,13 @@ Namespace DBMaterialesDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillAll(ByVal dataTable As DBMaterialesDataSet.DataTable1DataTable) As Integer
+        Public Overloads Overridable Function FillByCategoria(ByVal dataTable As DBMaterialesDataSet.DataTable1DataTable, ByVal categoria As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (categoria Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("categoria")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(categoria,String)
+            End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -2936,8 +2952,13 @@ Namespace DBMaterialesDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBy1() As DBMaterialesDataSet.DataTable1DataTable
+        Public Overloads Overridable Function GetDataBy(ByVal categoria As String) As DBMaterialesDataSet.DataTable1DataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (categoria Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("categoria")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(categoria,String)
+            End If
             Dim dataTable As DBMaterialesDataSet.DataTable1DataTable = New DBMaterialesDataSet.DataTable1DataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -2947,13 +2968,17 @@ Namespace DBMaterialesDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByFiltro(ByVal dataTable As DBMaterialesDataSet.DataTable1DataTable, ByVal numero As Integer, ByVal categoria As String) As Integer
+        Public Overloads Overridable Function FillBySubCatAmbos(ByVal dataTable As DBMaterialesDataSet.DataTable1DataTable, ByVal categoria As String, ByVal _sub As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(2)
-            Me.Adapter.SelectCommand.Parameters(0).Value = CType(numero,Integer)
             If (categoria Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("categoria")
             Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(categoria,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(categoria,String)
+            End If
+            If (_sub Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("_sub")
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(_sub,String)
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -2966,13 +2991,51 @@ Namespace DBMaterialesDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBy(ByVal numero As Integer, ByVal categoria As String) As DBMaterialesDataSet.DataTable1DataTable
+        Public Overloads Overridable Function GetDataBy2(ByVal categoria As String, ByVal _sub As String) As DBMaterialesDataSet.DataTable1DataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(2)
-            Me.Adapter.SelectCommand.Parameters(0).Value = CType(numero,Integer)
             If (categoria Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("categoria")
             Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(categoria,String)
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(categoria,String)
+            End If
+            If (_sub Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("_sub")
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(_sub,String)
+            End If
+            Dim dataTable As DBMaterialesDataSet.DataTable1DataTable = New DBMaterialesDataSet.DataTable1DataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBySubCategoria(ByVal dataTable As DBMaterialesDataSet.DataTable1DataTable, ByVal subCategoria As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            If (subCategoria Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("subCategoria")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(subCategoria,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy1(ByVal subCategoria As String) As DBMaterialesDataSet.DataTable1DataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            If (subCategoria Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("subCategoria")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(subCategoria,String)
             End If
             Dim dataTable As DBMaterialesDataSet.DataTable1DataTable = New DBMaterialesDataSet.DataTable1DataTable()
             Me.Adapter.Fill(dataTable)

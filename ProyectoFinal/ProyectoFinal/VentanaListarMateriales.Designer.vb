@@ -22,53 +22,30 @@ Partial Class VentanaListarMateriales
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VentanaListarMateriales))
         Me.buttonRegresar = New System.Windows.Forms.Button()
         Me.labelNumeroMaterial = New System.Windows.Forms.Label()
         Me.textBoxNumero = New System.Windows.Forms.TextBox()
         Me.buttonListar = New System.Windows.Forms.Button()
-        Me.DBMaterialesDataSet = New ProyectoFinal.DBMaterialesDataSet()
-        Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataTable1TableAdapter = New ProyectoFinal.DBMaterialesDataSetTableAdapters.DataTable1TableAdapter()
-        Me.TableAdapterManager = New ProyectoFinal.DBMaterialesDataSetTableAdapters.TableAdapterManager()
-        Me.DataTable1BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.DataTable1BindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.FillToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.NumeroToolStripLabel = New System.Windows.Forms.ToolStripLabel()
-        Me.NumeroToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
-        Me.FillToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.DataTable1DataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.labelCategoria = New System.Windows.Forms.Label()
-        Me.textBoxCategoria = New System.Windows.Forms.TextBox()
+        Me.labelSubCategoria = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.labelFecha = New System.Windows.Forms.Label()
+        Me.labelPasillo = New System.Windows.Forms.Label()
+        Me.gridViewMateriales = New System.Windows.Forms.DataGridView()
+        Me.DBMaterialesDataSet = New ProyectoFinal.DBMaterialesDataSet()
+        Me.comboBoxCategoria = New System.Windows.Forms.ComboBox()
+        Me.comboBoxSubCategoria = New System.Windows.Forms.ComboBox()
+        Me.comboBoxPasillo = New System.Windows.Forms.ComboBox()
+        Me.groupBoxSeccion = New System.Windows.Forms.GroupBox()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
+        CType(Me.gridViewMateriales, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DBMaterialesDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataTable1BindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.DataTable1BindingNavigator.SuspendLayout()
-        Me.FillToolStrip.SuspendLayout()
-        CType(Me.DataTable1DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.groupBoxSeccion.SuspendLayout()
         Me.SuspendLayout()
         '
         'buttonRegresar
@@ -85,13 +62,13 @@ Partial Class VentanaListarMateriales
         Me.labelNumeroMaterial.AutoSize = True
         Me.labelNumeroMaterial.Location = New System.Drawing.Point(13, 76)
         Me.labelNumeroMaterial.Name = "labelNumeroMaterial"
-        Me.labelNumeroMaterial.Size = New System.Drawing.Size(87, 13)
+        Me.labelNumeroMaterial.Size = New System.Drawing.Size(103, 13)
         Me.labelNumeroMaterial.TabIndex = 4
         Me.labelNumeroMaterial.Text = "Número Material:"
         '
         'textBoxNumero
         '
-        Me.textBoxNumero.Location = New System.Drawing.Point(106, 73)
+        Me.textBoxNumero.Location = New System.Drawing.Point(116, 74)
         Me.textBoxNumero.Name = "textBoxNumero"
         Me.textBoxNumero.Size = New System.Drawing.Size(79, 20)
         Me.textBoxNumero.TabIndex = 5
@@ -105,286 +82,198 @@ Partial Class VentanaListarMateriales
         Me.buttonListar.Text = "Listar"
         Me.buttonListar.UseVisualStyleBackColor = True
         '
-        'DBMaterialesDataSet
-        '
-        Me.DBMaterialesDataSet.DataSetName = "DBMaterialesDataSet"
-        Me.DBMaterialesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DataTable1BindingSource
-        '
-        Me.DataTable1BindingSource.DataMember = "DataTable1"
-        Me.DataTable1BindingSource.DataSource = Me.DBMaterialesDataSet
-        '
-        'DataTable1TableAdapter
-        '
-        Me.DataTable1TableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.Gest_MaterialesTableAdapter = Nothing
-        Me.TableAdapterManager.MaterialesTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = ProyectoFinal.DBMaterialesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'DataTable1BindingNavigator
-        '
-        Me.DataTable1BindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.DataTable1BindingNavigator.BindingSource = Me.DataTable1BindingSource
-        Me.DataTable1BindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.DataTable1BindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.DataTable1BindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.DataTable1BindingNavigatorSaveItem})
-        Me.DataTable1BindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.DataTable1BindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.DataTable1BindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.DataTable1BindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.DataTable1BindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.DataTable1BindingNavigator.Name = "DataTable1BindingNavigator"
-        Me.DataTable1BindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.DataTable1BindingNavigator.Size = New System.Drawing.Size(1370, 25)
-        Me.DataTable1BindingNavigator.TabIndex = 7
-        Me.DataTable1BindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Posición"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Mover último"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'DataTable1BindingNavigatorSaveItem
-        '
-        Me.DataTable1BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.DataTable1BindingNavigatorSaveItem.Enabled = False
-        Me.DataTable1BindingNavigatorSaveItem.Image = CType(resources.GetObject("DataTable1BindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.DataTable1BindingNavigatorSaveItem.Name = "DataTable1BindingNavigatorSaveItem"
-        Me.DataTable1BindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
-        Me.DataTable1BindingNavigatorSaveItem.Text = "Guardar datos"
-        '
-        'FillToolStrip
-        '
-        Me.FillToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NumeroToolStripLabel, Me.NumeroToolStripTextBox, Me.FillToolStripButton})
-        Me.FillToolStrip.Location = New System.Drawing.Point(0, 25)
-        Me.FillToolStrip.Name = "FillToolStrip"
-        Me.FillToolStrip.Size = New System.Drawing.Size(1370, 25)
-        Me.FillToolStrip.TabIndex = 8
-        Me.FillToolStrip.Text = "FillToolStrip"
-        '
-        'NumeroToolStripLabel
-        '
-        Me.NumeroToolStripLabel.Name = "NumeroToolStripLabel"
-        Me.NumeroToolStripLabel.Size = New System.Drawing.Size(52, 22)
-        Me.NumeroToolStripLabel.Text = "numero:"
-        '
-        'NumeroToolStripTextBox
-        '
-        Me.NumeroToolStripTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.NumeroToolStripTextBox.Name = "NumeroToolStripTextBox"
-        Me.NumeroToolStripTextBox.Size = New System.Drawing.Size(100, 25)
-        '
-        'FillToolStripButton
-        '
-        Me.FillToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.FillToolStripButton.Name = "FillToolStripButton"
-        Me.FillToolStripButton.Size = New System.Drawing.Size(26, 22)
-        Me.FillToolStripButton.Text = "Fill"
-        '
-        'DataTable1DataGridView
-        '
-        Me.DataTable1DataGridView.AutoGenerateColumns = False
-        Me.DataTable1DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataTable1DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11})
-        Me.DataTable1DataGridView.DataSource = Me.DataTable1BindingSource
-        Me.DataTable1DataGridView.Location = New System.Drawing.Point(282, 28)
-        Me.DataTable1DataGridView.Name = "DataTable1DataGridView"
-        Me.DataTable1DataGridView.Size = New System.Drawing.Size(1095, 292)
-        Me.DataTable1DataGridView.TabIndex = 8
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "num_mat"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "num_mat"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "mat"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "mat"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "cat"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "cat"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "sub_cat"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "sub_cat"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "fe_reg"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "fe_reg"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "desc"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "desc"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "imp_com"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "imp_com"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "imp_ven"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "imp_ven"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "pas"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "pas"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "sec"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "sec"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "stock"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "stock"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        '
         'labelCategoria
         '
         Me.labelCategoria.AutoSize = True
         Me.labelCategoria.Location = New System.Drawing.Point(16, 112)
         Me.labelCategoria.Name = "labelCategoria"
-        Me.labelCategoria.Size = New System.Drawing.Size(57, 13)
+        Me.labelCategoria.Size = New System.Drawing.Size(67, 13)
         Me.labelCategoria.TabIndex = 9
         Me.labelCategoria.Text = "Categoría:"
         '
-        'textBoxCategoria
+        'labelSubCategoria
         '
-        Me.textBoxCategoria.Location = New System.Drawing.Point(106, 112)
-        Me.textBoxCategoria.Name = "textBoxCategoria"
-        Me.textBoxCategoria.Size = New System.Drawing.Size(100, 20)
-        Me.textBoxCategoria.TabIndex = 10
+        Me.labelSubCategoria.AutoSize = True
+        Me.labelSubCategoria.Location = New System.Drawing.Point(16, 158)
+        Me.labelSubCategoria.Name = "labelSubCategoria"
+        Me.labelSubCategoria.Size = New System.Drawing.Size(85, 13)
+        Me.labelSubCategoria.TabIndex = 11
+        Me.labelSubCategoria.Text = "Subcategoria:"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(116, 200)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
+        Me.DateTimePicker1.TabIndex = 13
+        '
+        'labelFecha
+        '
+        Me.labelFecha.AutoSize = True
+        Me.labelFecha.Location = New System.Drawing.Point(13, 205)
+        Me.labelFecha.Name = "labelFecha"
+        Me.labelFecha.Size = New System.Drawing.Size(37, 13)
+        Me.labelFecha.TabIndex = 16
+        Me.labelFecha.Text = "Fecha"
+        '
+        'labelPasillo
+        '
+        Me.labelPasillo.AutoSize = True
+        Me.labelPasillo.Location = New System.Drawing.Point(16, 234)
+        Me.labelPasillo.Name = "labelPasillo"
+        Me.labelPasillo.Size = New System.Drawing.Size(55, 13)
+        Me.labelPasillo.TabIndex = 17
+        Me.labelPasillo.Text = "Pasillo:"
+        '
+        'gridViewMateriales
+        '
+        Me.gridViewMateriales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gridViewMateriales.Location = New System.Drawing.Point(496, 76)
+        Me.gridViewMateriales.Name = "gridViewMateriales"
+        Me.gridViewMateriales.Size = New System.Drawing.Size(730, 326)
+        Me.gridViewMateriales.TabIndex = 18
+        '
+        'DBMaterialesDataSet
+        '
+        Me.DBMaterialesDataSet.DataSetName = "DBMaterialesDataSet"
+        Me.DBMaterialesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'comboBoxCategoria
+        '
+        Me.comboBoxCategoria.FormattingEnabled = True
+        Me.comboBoxCategoria.Items.AddRange(New Object() {"Hardware", "Software"})
+        Me.comboBoxCategoria.Location = New System.Drawing.Point(116, 112)
+        Me.comboBoxCategoria.Name = "comboBoxCategoria"
+        Me.comboBoxCategoria.Size = New System.Drawing.Size(100, 21)
+        Me.comboBoxCategoria.TabIndex = 19
+        '
+        'comboBoxSubCategoria
+        '
+        Me.comboBoxSubCategoria.FormattingEnabled = True
+        Me.comboBoxSubCategoria.Items.AddRange(New Object() {"Equipo", "Periférico", "Antivirus", "Servicio"})
+        Me.comboBoxSubCategoria.Location = New System.Drawing.Point(116, 155)
+        Me.comboBoxSubCategoria.Name = "comboBoxSubCategoria"
+        Me.comboBoxSubCategoria.Size = New System.Drawing.Size(100, 21)
+        Me.comboBoxSubCategoria.TabIndex = 20
+        '
+        'comboBoxPasillo
+        '
+        Me.comboBoxPasillo.FormattingEnabled = True
+        Me.comboBoxPasillo.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8"})
+        Me.comboBoxPasillo.Location = New System.Drawing.Point(116, 231)
+        Me.comboBoxPasillo.Name = "comboBoxPasillo"
+        Me.comboBoxPasillo.Size = New System.Drawing.Size(100, 21)
+        Me.comboBoxPasillo.TabIndex = 21
+        '
+        'groupBoxSeccion
+        '
+        Me.groupBoxSeccion.Controls.Add(Me.RadioButton6)
+        Me.groupBoxSeccion.Controls.Add(Me.RadioButton5)
+        Me.groupBoxSeccion.Controls.Add(Me.RadioButton4)
+        Me.groupBoxSeccion.Controls.Add(Me.RadioButton3)
+        Me.groupBoxSeccion.Controls.Add(Me.RadioButton2)
+        Me.groupBoxSeccion.Controls.Add(Me.RadioButton1)
+        Me.groupBoxSeccion.Location = New System.Drawing.Point(16, 270)
+        Me.groupBoxSeccion.Name = "groupBoxSeccion"
+        Me.groupBoxSeccion.Size = New System.Drawing.Size(238, 100)
+        Me.groupBoxSeccion.TabIndex = 22
+        Me.groupBoxSeccion.TabStop = False
+        Me.groupBoxSeccion.Text = "Sección"
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(7, 20)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton1.TabIndex = 0
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "A"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(7, 44)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton2.TabIndex = 1
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "B"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton3
+        '
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(7, 68)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton3.TabIndex = 2
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "C"
+        Me.RadioButton3.UseVisualStyleBackColor = True
+        '
+        'RadioButton4
+        '
+        Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.Location = New System.Drawing.Point(126, 20)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton4.TabIndex = 3
+        Me.RadioButton4.TabStop = True
+        Me.RadioButton4.Text = "D"
+        Me.RadioButton4.UseVisualStyleBackColor = True
+        '
+        'RadioButton5
+        '
+        Me.RadioButton5.AutoSize = True
+        Me.RadioButton5.Location = New System.Drawing.Point(126, 44)
+        Me.RadioButton5.Name = "RadioButton5"
+        Me.RadioButton5.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton5.TabIndex = 4
+        Me.RadioButton5.TabStop = True
+        Me.RadioButton5.Text = "E"
+        Me.RadioButton5.UseVisualStyleBackColor = True
+        '
+        'RadioButton6
+        '
+        Me.RadioButton6.AutoSize = True
+        Me.RadioButton6.Location = New System.Drawing.Point(126, 68)
+        Me.RadioButton6.Name = "RadioButton6"
+        Me.RadioButton6.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton6.TabIndex = 5
+        Me.RadioButton6.TabStop = True
+        Me.RadioButton6.Text = "F"
+        Me.RadioButton6.UseVisualStyleBackColor = True
         '
         'VentanaListarMateriales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ClientSize = New System.Drawing.Size(1370, 557)
-        Me.Controls.Add(Me.textBoxCategoria)
+        Me.Controls.Add(Me.groupBoxSeccion)
+        Me.Controls.Add(Me.comboBoxPasillo)
+        Me.Controls.Add(Me.comboBoxSubCategoria)
+        Me.Controls.Add(Me.comboBoxCategoria)
+        Me.Controls.Add(Me.gridViewMateriales)
+        Me.Controls.Add(Me.labelPasillo)
+        Me.Controls.Add(Me.labelFecha)
+        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.labelSubCategoria)
         Me.Controls.Add(Me.labelCategoria)
-        Me.Controls.Add(Me.DataTable1DataGridView)
-        Me.Controls.Add(Me.FillToolStrip)
-        Me.Controls.Add(Me.DataTable1BindingNavigator)
         Me.Controls.Add(Me.buttonListar)
         Me.Controls.Add(Me.textBoxNumero)
         Me.Controls.Add(Me.labelNumeroMaterial)
         Me.Controls.Add(Me.buttonRegresar)
+        Me.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "VentanaListarMateriales"
         Me.Text = "VentanaListarMateriales"
+        CType(Me.gridViewMateriales, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DBMaterialesDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataTable1BindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.DataTable1BindingNavigator.ResumeLayout(False)
-        Me.DataTable1BindingNavigator.PerformLayout()
-        Me.FillToolStrip.ResumeLayout(False)
-        Me.FillToolStrip.PerformLayout()
-        CType(Me.DataTable1DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.groupBoxSeccion.ResumeLayout(False)
+        Me.groupBoxSeccion.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -394,39 +283,21 @@ Partial Class VentanaListarMateriales
     Friend WithEvents labelNumeroMaterial As Label
     Friend WithEvents textBoxNumero As TextBox
     Friend WithEvents buttonListar As Button
-    Friend WithEvents DBMaterialesDataSet As DBMaterialesDataSet
-    Friend WithEvents DataTable1BindingSource As BindingSource
-    Friend WithEvents DataTable1TableAdapter As DBMaterialesDataSetTableAdapters.DataTable1TableAdapter
-    Friend WithEvents TableAdapterManager As DBMaterialesDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents DataTable1BindingNavigator As BindingNavigator
-    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
-    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
-    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
-    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
-    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
-    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
-    Friend WithEvents DataTable1BindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents FillToolStrip As ToolStrip
-    Friend WithEvents NumeroToolStripLabel As ToolStripLabel
-    Friend WithEvents NumeroToolStripTextBox As ToolStripTextBox
-    Friend WithEvents FillToolStripButton As ToolStripButton
-    Friend WithEvents DataTable1DataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
     Friend WithEvents labelCategoria As Label
-    Friend WithEvents textBoxCategoria As TextBox
+    Friend WithEvents labelSubCategoria As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents labelFecha As Label
+    Friend WithEvents labelPasillo As Label
+    Friend WithEvents gridViewMateriales As DataGridView
+    Friend WithEvents DBMaterialesDataSet As DBMaterialesDataSet
+    Friend WithEvents comboBoxCategoria As ComboBox
+    Friend WithEvents comboBoxSubCategoria As ComboBox
+    Friend WithEvents comboBoxPasillo As ComboBox
+    Friend WithEvents groupBoxSeccion As GroupBox
+    Friend WithEvents RadioButton6 As RadioButton
+    Friend WithEvents RadioButton5 As RadioButton
+    Friend WithEvents RadioButton4 As RadioButton
+    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButton1 As RadioButton
 End Class

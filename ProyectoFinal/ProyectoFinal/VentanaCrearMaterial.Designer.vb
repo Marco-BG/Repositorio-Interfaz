@@ -140,9 +140,9 @@ Partial Class VentanaCrearMaterial
         '
         'tiempoFechaRegistro
         '
-        Me.tiempoFechaRegistro.CustomFormat = "yyyy/MM/dd"
+        Me.tiempoFechaRegistro.CustomFormat = ""
         Me.tiempoFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.tiempoFechaRegistro.Location = New System.Drawing.Point(111, 175)
+        Me.tiempoFechaRegistro.Location = New System.Drawing.Point(112, 175)
         Me.tiempoFechaRegistro.Name = "tiempoFechaRegistro"
         Me.tiempoFechaRegistro.Size = New System.Drawing.Size(106, 20)
         Me.tiempoFechaRegistro.TabIndex = 11

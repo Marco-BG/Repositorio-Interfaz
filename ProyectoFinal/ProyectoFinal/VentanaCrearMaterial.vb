@@ -43,12 +43,24 @@ Public Class VentanaCrearMaterial
 
         Dim numRegister As SqlDataReader = comandSelect.ExecuteReader()
 
+        Dim cerosGenerados As String = ""
         Try
             If numRegister.Read Then
                 textBoxRegistro.Text = numRegister(0) + 1
             End If
+            cerosGenerados = textBoxRegistro.Text
+            While cerosGenerados.Length < 8
+                cerosGenerados = "0" & cerosGenerados
+            End While
+            textBoxRegistro.Text = cerosGenerados
         Catch ex As Exception
             textBoxRegistro.Text = 1
+
+            cerosGenerados = textBoxRegistro.Text
+            While cerosGenerados.Length < 8
+                cerosGenerados = "0" & cerosGenerados
+            End While
+            textBoxRegistro.Text = cerosGenerados
         End Try
     End Sub
 
@@ -126,6 +138,17 @@ Public Class VentanaCrearMaterial
 
             cmd = New SqlCommand("INSERT INTO Materiales VALUES(@numRegistro, @material, @categoria, @subCategoria, @fechaRegistro, @descripcion, @importeCompra, @importeVenta)", conn)
             cmd.CommandType = CommandType.Text
+
+            If (textBoxMaterial.Text.Equals("") And textBoxStock.Text.Equals("")) Then
+                MessageBox.Show("Debe rellenar el campo " + labelMaterial.Text + " y el campo " + labelStock.Text)
+                Exit Sub
+            End If
+
+            If textBoxDescripcion.Text.Equals("") Or textBoxCompra.Text.Equals("") Or textBoxVenta.Text.Equals("") Then
+                textBoxDescripcion.Text = ""
+                textBoxCompra.Text = 0
+                textBoxVenta.Text = 0
+            End If
 
             cmd.Parameters.Add("@numRegistro", SqlDbType.Int).Value = textBoxRegistro.Text
             cmd.Parameters.Add("@material", SqlDbType.VarChar).Value = textBoxMaterial.Text
