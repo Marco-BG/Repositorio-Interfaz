@@ -37,12 +37,12 @@ Partial Class VentanaListarMateriales
         Me.comboBoxSubCategoria = New System.Windows.Forms.ComboBox()
         Me.comboBoxPasillo = New System.Windows.Forms.ComboBox()
         Me.groupBoxSeccion = New System.Windows.Forms.GroupBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
         Me.RadioButton6 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         CType(Me.gridViewMateriales, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DBMaterialesDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.groupBoxSeccion.SuspendLayout()
@@ -141,8 +141,9 @@ Partial Class VentanaListarMateriales
         '
         'comboBoxCategoria
         '
+        Me.comboBoxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comboBoxCategoria.FormattingEnabled = True
-        Me.comboBoxCategoria.Items.AddRange(New Object() {"Hardware", "Software"})
+        Me.comboBoxCategoria.Items.AddRange(New Object() {"", "Hardware", "Software"})
         Me.comboBoxCategoria.Location = New System.Drawing.Point(116, 112)
         Me.comboBoxCategoria.Name = "comboBoxCategoria"
         Me.comboBoxCategoria.Size = New System.Drawing.Size(100, 21)
@@ -150,8 +151,9 @@ Partial Class VentanaListarMateriales
         '
         'comboBoxSubCategoria
         '
+        Me.comboBoxSubCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comboBoxSubCategoria.FormattingEnabled = True
-        Me.comboBoxSubCategoria.Items.AddRange(New Object() {"Equipo", "Periférico", "Antivirus", "Servicio"})
+        Me.comboBoxSubCategoria.Items.AddRange(New Object() {"", "Equipo", "Periférico", "Antivirus", "Servicio"})
         Me.comboBoxSubCategoria.Location = New System.Drawing.Point(116, 155)
         Me.comboBoxSubCategoria.Name = "comboBoxSubCategoria"
         Me.comboBoxSubCategoria.Size = New System.Drawing.Size(100, 21)
@@ -181,49 +183,16 @@ Partial Class VentanaListarMateriales
         Me.groupBoxSeccion.TabStop = False
         Me.groupBoxSeccion.Text = "Sección"
         '
-        'RadioButton1
+        'RadioButton6
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(7, 20)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(31, 17)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "A"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(7, 44)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(31, 17)
-        Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "B"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton3
-        '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(7, 68)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(31, 17)
-        Me.RadioButton3.TabIndex = 2
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "C"
-        Me.RadioButton3.UseVisualStyleBackColor = True
-        '
-        'RadioButton4
-        '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(126, 20)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(31, 17)
-        Me.RadioButton4.TabIndex = 3
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "D"
-        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.RadioButton6.AutoSize = True
+        Me.RadioButton6.Location = New System.Drawing.Point(126, 68)
+        Me.RadioButton6.Name = "RadioButton6"
+        Me.RadioButton6.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton6.TabIndex = 5
+        Me.RadioButton6.TabStop = True
+        Me.RadioButton6.Text = "F"
+        Me.RadioButton6.UseVisualStyleBackColor = True
         '
         'RadioButton5
         '
@@ -236,16 +205,49 @@ Partial Class VentanaListarMateriales
         Me.RadioButton5.Text = "E"
         Me.RadioButton5.UseVisualStyleBackColor = True
         '
-        'RadioButton6
+        'RadioButton4
         '
-        Me.RadioButton6.AutoSize = True
-        Me.RadioButton6.Location = New System.Drawing.Point(126, 68)
-        Me.RadioButton6.Name = "RadioButton6"
-        Me.RadioButton6.Size = New System.Drawing.Size(31, 17)
-        Me.RadioButton6.TabIndex = 5
-        Me.RadioButton6.TabStop = True
-        Me.RadioButton6.Text = "F"
-        Me.RadioButton6.UseVisualStyleBackColor = True
+        Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.Location = New System.Drawing.Point(126, 20)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton4.TabIndex = 3
+        Me.RadioButton4.TabStop = True
+        Me.RadioButton4.Text = "D"
+        Me.RadioButton4.UseVisualStyleBackColor = True
+        '
+        'RadioButton3
+        '
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(7, 68)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton3.TabIndex = 2
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "C"
+        Me.RadioButton3.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(7, 44)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton2.TabIndex = 1
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "B"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(7, 20)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton1.TabIndex = 0
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "A"
+        Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'VentanaListarMateriales
         '
