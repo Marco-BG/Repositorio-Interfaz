@@ -100,41 +100,41 @@ Partial Class Form1
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(168, 6)
         '
         'CrearMaterialToolStripMenuItem
         '
         Me.CrearMaterialToolStripMenuItem.Name = "CrearMaterialToolStripMenuItem"
-        Me.CrearMaterialToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CrearMaterialToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.CrearMaterialToolStripMenuItem.Text = "Crear Material"
         '
         'ModificarMaterialToolStripMenuItem
         '
         Me.ModificarMaterialToolStripMenuItem.Name = "ModificarMaterialToolStripMenuItem"
-        Me.ModificarMaterialToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ModificarMaterialToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.ModificarMaterialToolStripMenuItem.Text = "Modificar Material"
         '
         'ListarMaterialesToolStripMenuItem
         '
         Me.ListarMaterialesToolStripMenuItem.Name = "ListarMaterialesToolStripMenuItem"
-        Me.ListarMaterialesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ListarMaterialesToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.ListarMaterialesToolStripMenuItem.Text = "Listar Materiales"
         '
         'EliminarMaterialToolStripMenuItem
         '
         Me.EliminarMaterialToolStripMenuItem.Name = "EliminarMaterialToolStripMenuItem"
-        Me.EliminarMaterialToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EliminarMaterialToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.EliminarMaterialToolStripMenuItem.Text = "Eliminar Material"
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(168, 6)
         '
         'CerrarToolStripMenuItem
         '
         Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
-        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.CerrarToolStripMenuItem.Text = "Cerrar"
         '
         'ToolStrip1
@@ -186,6 +186,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.buttonEliminarMaterial)

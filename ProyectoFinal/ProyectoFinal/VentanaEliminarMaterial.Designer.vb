@@ -30,7 +30,7 @@ Partial Class VentanaEliminarMaterial
         '
         'buttonRegresarInicio
         '
-        Me.buttonRegresarInicio.Location = New System.Drawing.Point(13, 13)
+        Me.buttonRegresarInicio.Location = New System.Drawing.Point(12, 43)
         Me.buttonRegresarInicio.Name = "buttonRegresarInicio"
         Me.buttonRegresarInicio.Size = New System.Drawing.Size(75, 23)
         Me.buttonRegresarInicio.TabIndex = 0
@@ -40,22 +40,22 @@ Partial Class VentanaEliminarMaterial
         'labelNumero
         '
         Me.labelNumero.AutoSize = True
-        Me.labelNumero.Location = New System.Drawing.Point(13, 79)
+        Me.labelNumero.Location = New System.Drawing.Point(13, 91)
         Me.labelNumero.Name = "labelNumero"
-        Me.labelNumero.Size = New System.Drawing.Size(39, 13)
+        Me.labelNumero.Size = New System.Drawing.Size(121, 13)
         Me.labelNumero.TabIndex = 1
-        Me.labelNumero.Text = "Label1"
+        Me.labelNumero.Text = "Número de Material:"
         '
         'textBoxNumeroEliminar
         '
-        Me.textBoxNumeroEliminar.Location = New System.Drawing.Point(59, 79)
+        Me.textBoxNumeroEliminar.Location = New System.Drawing.Point(140, 88)
         Me.textBoxNumeroEliminar.Name = "textBoxNumeroEliminar"
         Me.textBoxNumeroEliminar.Size = New System.Drawing.Size(100, 20)
         Me.textBoxNumeroEliminar.TabIndex = 2
         '
         'buttonEliminar
         '
-        Me.buttonEliminar.Location = New System.Drawing.Point(265, 79)
+        Me.buttonEliminar.Location = New System.Drawing.Point(260, 86)
         Me.buttonEliminar.Name = "buttonEliminar"
         Me.buttonEliminar.Size = New System.Drawing.Size(75, 23)
         Me.buttonEliminar.TabIndex = 3
@@ -66,11 +66,13 @@ Partial Class VentanaEliminarMaterial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.ClientSize = New System.Drawing.Size(406, 188)
         Me.Controls.Add(Me.buttonEliminar)
         Me.Controls.Add(Me.textBoxNumeroEliminar)
         Me.Controls.Add(Me.labelNumero)
         Me.Controls.Add(Me.buttonRegresarInicio)
+        Me.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "VentanaEliminarMaterial"
         Me.Text = "VentanaEliminarMaterial"
         Me.ResumeLayout(False)

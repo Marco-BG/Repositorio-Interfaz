@@ -389,36 +389,36 @@ Partial Class VentanaCrearMaterial
         'InicioToolStripMenuItem
         '
         Me.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem"
-        Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.InicioToolStripMenuItem.Text = "Inicio"
         '
         'ModificarMaterialToolStripMenuItem
         '
         Me.ModificarMaterialToolStripMenuItem.Name = "ModificarMaterialToolStripMenuItem"
-        Me.ModificarMaterialToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ModificarMaterialToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.ModificarMaterialToolStripMenuItem.Text = "Modificar Material"
         '
         'ListarMaterialesToolStripMenuItem
         '
         Me.ListarMaterialesToolStripMenuItem.Name = "ListarMaterialesToolStripMenuItem"
-        Me.ListarMaterialesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ListarMaterialesToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.ListarMaterialesToolStripMenuItem.Text = "Listar Materiales"
         '
         'EliminarMaterialToolStripMenuItem
         '
         Me.EliminarMaterialToolStripMenuItem.Name = "EliminarMaterialToolStripMenuItem"
-        Me.EliminarMaterialToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EliminarMaterialToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.EliminarMaterialToolStripMenuItem.Text = "Eliminar Material"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(168, 6)
         '
         'CerrarToolStripMenuItem
         '
         Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
-        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.CerrarToolStripMenuItem.Text = "Cerrar"
         '
         'ToolStrip1
