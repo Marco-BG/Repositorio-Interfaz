@@ -1,6 +1,11 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Text.RegularExpressions
 
 Public Class VentanaModificarMaterial
+    Private Sub VentanaModificarMaterial_Load(sender As Object, e As EventArgs) Handles Me.Load
+        fechaRegistro.Format = DateTimePickerFormat.Custom
+        fechaRegistro.CustomFormat = " "
+    End Sub
     Private Sub buttonRegresar_Click(sender As Object, e As EventArgs) Handles buttonRegresar.Click
         Dim ventanaInicio As New Form1
 
@@ -13,6 +18,13 @@ Public Class VentanaModificarMaterial
         Dim cmd As New SqlCommand
         Dim datosSelect As SqlDataReader
 
+        Dim regex As Regex = New Regex("^[1-9]+$")
+
+        If Not regex.IsMatch(textBoxRegistro.Text) Then
+            MessageBox.Show("Debe introducir un número")
+
+        End If
+
         conn.ConnectionString = miConexionString
 
         conn.Open()
@@ -20,12 +32,14 @@ Public Class VentanaModificarMaterial
         cmd.CommandType = CommandType.Text
 
         cmd.Parameters.Add("@numeroMaterial", SqlDbType.Int).Value = textBoxRegistro.Text
+        textBoxNumero.Text = textBoxRegistro.Text
         Try
+
             datosSelect = cmd.ExecuteReader()
 
             If datosSelect.HasRows Then
                 datosSelect.Read()
-                MessageBox.Show(datosSelect.GetString(1) + " " + CStr(CInt(datosSelect.GetInt32(2))) + " " + datosSelect.GetString(3) + " " + datosSelect.GetString(4) + " " + datosSelect.GetString(5) + " " + datosSelect.GetDateTime(6) + " " + datosSelect.GetString(7) + " " + CStr(CDbl(datosSelect.GetSqlMoney(8))) + " " + CStr(CDbl(datosSelect.GetSqlMoney(9))) + " " + Str(CInt(datosSelect.GetInt32(0))))
+                'MessageBox.Show(datosSelect.GetString(1) + " " + CStr(CInt(datosSelect.GetInt32(2))) + " " + datosSelect.GetString(3) + " " + datosSelect.GetString(4) + " " + datosSelect.GetString(5) + " " + datosSelect.GetDateTime(6) + " " + datosSelect.GetString(7) + " " + CStr(CDbl(datosSelect.GetSqlMoney(8))) + " " + CStr(CDbl(datosSelect.GetSqlMoney(9))) + " " + Str(CInt(datosSelect.GetInt32(0))))
 
                 Dim seccion As String = datosSelect.GetString(1)
                 Dim categoria As String = datosSelect.GetString(4)
@@ -68,16 +82,20 @@ Public Class VentanaModificarMaterial
                 comboBoxSubCategoria.Text = datosSelect.GetString(5)
                 fechaRegistro.Text = datosSelect.GetDateTime(6)
                 textBoxDescripcion.Text = datosSelect.GetString(7)
-                textBoxCompra.Text = datosSelect.GetSqlMoney(8)
-                textBoxVenta.Text = datosSelect.GetSqlMoney(9)
+                textBoxCompra.Text = datosSelect.GetSqlDecimal(8)
+                textBoxVenta.Text = datosSelect.GetSqlDecimal(9)
                 textBoxStock.Text = CStr(CInt(datosSelect.GetInt32(2)))
 
             Else
                 MessageBox.Show("No existe el material")
+                cleanTextBox()
             End If
 
         Catch ex As Exception
-            MessageBox.Show("Debe poner el id para buscar el material")
+            'MessageBox.Show("Debe poner el id para buscar el material")
+            'MessageBox.Show(ex.Message)
+            textBoxRegistro.Clear()
+            textBoxNumero.Clear()
         Finally
             loadPasillos()
 
@@ -107,6 +125,27 @@ Public Class VentanaModificarMaterial
         comboBoxPasillo.Items.Add(6)
         comboBoxPasillo.Items.Add(7)
         comboBoxPasillo.Items.Add(8)
+    End Sub
+    Private Sub cleanTextBox()
+        textBoxRegistro.Clear()
+        textBoxNumero.Clear()
+        textBoxMaterial.Clear()
+        textBoxDescripcion.Clear()
+        textBoxCompra.Clear()
+        textBoxVenta.Clear()
+        textBoxStock.Clear()
+
+        fechaRegistro.CustomFormat = " "
+
+        comboBoxPasillo.Text = ""
+        comboBoxPasillo.Items.Clear()
+
+        comboBoxCategoria.Text = ""
+        comboBoxCategoria.Items.Clear()
+
+        comboBoxSubCategoria.Text = ""
+        comboBoxSubCategoria.Items.Clear()
+
     End Sub
 
     Private Sub buttonGuardar_Click(sender As Object, e As EventArgs) Handles buttonGuardar.Click
@@ -138,7 +177,7 @@ Public Class VentanaModificarMaterial
             Else
                 cmdSelectNumber = New SqlCommand("SELECT num_mat FROM Materiales WHERE num_mat = @numero", conn)
                 cmdSelectNumber.CommandType = CommandType.Text
-                cmdSelectNumber.Parameters.Add("@numero", SqlDbType.Int).Value = textBoxRegistro.Text
+                cmdSelectNumber.Parameters.Add("@numero", SqlDbType.Int).Value = textBoxNumero.Text
 
                 sqlDataReader = cmdSelectNumber.ExecuteReader
 
@@ -164,7 +203,7 @@ Public Class VentanaModificarMaterial
                         cmd.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = textBoxDescripcion.Text
                         cmd.Parameters.Add("@importeCompra", SqlDbType.Money).Value = textBoxCompra.Text
                         cmd.Parameters.Add("@importeVenta", SqlDbType.Money).Value = textBoxVenta.Text
-                        cmd.Parameters.Add("@numeroMaterial", SqlDbType.Int).Value = CStr(numeroGuardado)
+                        cmd.Parameters.Add("@numeroMaterial", SqlDbType.Int).Value = textBoxNumero.Text 'CStr(numeroGuardado)
 
                         cmd.ExecuteNonQuery()
 
@@ -174,7 +213,7 @@ Public Class VentanaModificarMaterial
                         cmd.Parameters.Add("@pasillo", SqlDbType.VarChar).Value = comboBoxPasillo.Text
                         cmd.Parameters.Add("@seccion", SqlDbType.VarChar).Value = valorSeccion
                         cmd.Parameters.Add("@stock", SqlDbType.Int).Value = textBoxStock.Text
-                        cmd.Parameters.Add("@numeroMaterial", SqlDbType.Int).Value = textBoxRegistro.Text
+                        cmd.Parameters.Add("@numeroMaterial", SqlDbType.Int).Value = textBoxNumero.Text 'textBoxRegistro.Text
 
                         cmd.ExecuteNonQuery()
                         MessageBox.Show("El material se ha guardado exitosamente")
@@ -186,5 +225,32 @@ Public Class VentanaModificarMaterial
         Catch ex As SqlException
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+    Private Sub fechaRegistro_ValueChanged(sender As Object, e As EventArgs) Handles fechaRegistro.ValueChanged
+        fechaRegistro.CustomFormat = "dd/MM/yyyy"
+    End Sub
+
+    Private Sub textBoxCompra_TextChanged(sender As Object, e As EventArgs) Handles textBoxCompra.TextChanged
+        If textBoxCompra.Text.Length < 1 Then
+            Exit Sub
+        Else
+            Try
+
+
+                Dim calculo As String = ""
+                If comboBoxCategoria.Text = "Hardware" Then
+                    calculo = CDbl(sender.Text) * 1.8
+                    textBoxVenta.Text = CStr(calculo)
+                Else
+                    calculo = CDbl(sender.Text) * 1.7
+                    textBoxVenta.Text = CStr(calculo)
+                End If
+            Catch ex As Exception
+                MessageBox.Show("Debe introducir números")
+                textBoxCompra.Clear()
+            End Try
+
+        End If
     End Sub
 End Class

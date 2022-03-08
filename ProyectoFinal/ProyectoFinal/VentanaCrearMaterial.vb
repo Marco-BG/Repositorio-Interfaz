@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
+Imports System.Text.RegularExpressions
 
 Public Class VentanaCrearMaterial
 
@@ -32,7 +33,7 @@ Public Class VentanaCrearMaterial
 
         textBoxRegistro.Enabled = False
 
-        conn.ConnectionString = MiConexionString
+        conn.ConnectionString = miConexionString
         conn.Open()
 
         cmd.Connection = conn
@@ -90,33 +91,38 @@ Public Class VentanaCrearMaterial
     End Sub
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
-        Dim cosa As String = Format(CDbl(textBoxCompra.Text), "c")
-        textBoxVenta.Text = cosa
-        MessageBox.Show(textBoxVenta.Text)
-    End Sub
 
     Private Sub textBoxCompra_TextChanged(sender As Object, e As EventArgs) Handles textBoxCompra.TextChanged
         If textBoxCompra.Text.Length < 1 Then
             Exit Sub
         Else
-            Dim cosa As String = Format(CDbl(textBoxCompra.Text), "#")
-
-            Dim calculo As String = ""
-            If comboBoxCategoria.Text = "Hardware" Then
-                calculo = CDbl(sender.Text) * 1.8
-                textBoxVenta.Text = CStr(calculo)
-            Else
-                calculo = CDbl(sender.Text) * 1.7
-                textBoxVenta.Text = CStr(calculo)
-            End If
+            Try
+                Dim calculo As String = ""
+                If comboBoxCategoria.Text = "Hardware" Then
+                    calculo = CDbl(sender.Text) * 1.8
+                    textBoxVenta.Text = CStr(calculo)
+                Else
+                    calculo = CDbl(sender.Text) * 1.7
+                    textBoxVenta.Text = CStr(calculo)
+                End If
+            Catch ex As Exception
+                MessageBox.Show("Debe introducir números")
+                textBoxCompra.Clear()
+            End Try
         End If
     End Sub
 
     Private Sub toolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         Dim conn As New SqlConnection
         Dim cmd As New SqlCommand
+
+        Dim regex As Regex = New Regex("^[1-9]+$")
+
+        If Not regex.IsMatch(textBoxStock.Text) Then
+            MessageBox.Show("Debe introducir valores númericos")
+            Exit Sub
+        End If
 
         Dim valorSeccion
 
@@ -141,6 +147,14 @@ Public Class VentanaCrearMaterial
 
             If (textBoxMaterial.Text.Equals("") And textBoxStock.Text.Equals("")) Then
                 MessageBox.Show("Debe rellenar el campo " + labelMaterial.Text + " y el campo " + labelStock.Text)
+                Exit Sub
+            End If
+            If (textBoxMaterial.Text.Equals("")) Then
+                MessageBox.Show("Debe rellenar el campo " + labelMaterial.Text)
+                Exit Sub
+            End If
+            If (textBoxStock.Text.Equals("")) Then
+                MessageBox.Show("Debe rellenar el campo " + labelStock.Text)
                 Exit Sub
             End If
 
@@ -170,7 +184,6 @@ Public Class VentanaCrearMaterial
         Catch ex As Exception
             MessageBox.Show("Debe rellenar los campos")
         Finally
-
             updateNumberMaterial()
             cleanAllTextBox()
         End Try
@@ -200,14 +213,5 @@ Public Class VentanaCrearMaterial
         Me.Close()
     End Sub
 
-    Private Sub cargaTabla()
-        Dim conn As New SqlConnection
-        Dim cmd As New SqlCommand
-
-        conn.ConnectionString = miConexionString
-
-        cmd = New SqlCommand("SELECT Materiales.num_mat, Materiales.mat, Materiales.cat, Materiales.sub_cat, Materiales.fe_reg, Materiales.[desc], Materiales.imp_com, Materiales.imp_ven, Gest_Materiales.pas, Gest_Materiales.sec, Gest_Materiales.stock
-                    FROM Gest_Materiales INNER JOIN Materiales ON Gest_Materiales.num_mat = Materiales.num_mat")
-    End Sub
 
 End Class

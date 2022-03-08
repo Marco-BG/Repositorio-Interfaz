@@ -90,7 +90,7 @@ Partial Class VentanaCrearMaterial
         Me.grupBoxCampos.Controls.Add(Me.labelMaterial)
         Me.grupBoxCampos.Controls.Add(Me.textBoxRegistro)
         Me.grupBoxCampos.Controls.Add(Me.labelNumeroRegistro)
-        Me.grupBoxCampos.Location = New System.Drawing.Point(144, 217)
+        Me.grupBoxCampos.Location = New System.Drawing.Point(147, 132)
         Me.grupBoxCampos.Name = "grupBoxCampos"
         Me.grupBoxCampos.Size = New System.Drawing.Size(275, 322)
         Me.grupBoxCampos.TabIndex = 1
@@ -354,7 +354,7 @@ Partial Class VentanaCrearMaterial
         Me.GroupBox1.Controls.Add(Me.comboBoxPasillo)
         Me.GroupBox1.Controls.Add(Me.textBoxStock)
         Me.GroupBox1.Controls.Add(Me.labelPasillo)
-        Me.GroupBox1.Location = New System.Drawing.Point(464, 217)
+        Me.GroupBox1.Location = New System.Drawing.Point(446, 132)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(246, 322)
         Me.GroupBox1.TabIndex = 6
@@ -364,7 +364,7 @@ Partial Class VentanaCrearMaterial
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(54, 93)
+        Me.PictureBox1.Location = New System.Drawing.Point(25, 68)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(87, 93)
         Me.PictureBox1.TabIndex = 7
@@ -389,36 +389,36 @@ Partial Class VentanaCrearMaterial
         'InicioToolStripMenuItem
         '
         Me.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem"
-        Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.InicioToolStripMenuItem.Text = "Inicio"
         '
         'ModificarMaterialToolStripMenuItem
         '
         Me.ModificarMaterialToolStripMenuItem.Name = "ModificarMaterialToolStripMenuItem"
-        Me.ModificarMaterialToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ModificarMaterialToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ModificarMaterialToolStripMenuItem.Text = "Modificar Material"
         '
         'ListarMaterialesToolStripMenuItem
         '
         Me.ListarMaterialesToolStripMenuItem.Name = "ListarMaterialesToolStripMenuItem"
-        Me.ListarMaterialesToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ListarMaterialesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ListarMaterialesToolStripMenuItem.Text = "Listar Materiales"
         '
         'EliminarMaterialToolStripMenuItem
         '
         Me.EliminarMaterialToolStripMenuItem.Name = "EliminarMaterialToolStripMenuItem"
-        Me.EliminarMaterialToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.EliminarMaterialToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EliminarMaterialToolStripMenuItem.Text = "Eliminar Material"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(168, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(177, 6)
         '
         'CerrarToolStripMenuItem
         '
         Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
-        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CerrarToolStripMenuItem.Text = "Cerrar"
         '
         'ToolStrip1

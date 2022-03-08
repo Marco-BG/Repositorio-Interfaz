@@ -68,14 +68,14 @@ Partial Class VentanaListarMateriales
         '
         'textBoxNumero
         '
-        Me.textBoxNumero.Location = New System.Drawing.Point(116, 74)
+        Me.textBoxNumero.Location = New System.Drawing.Point(116, 73)
         Me.textBoxNumero.Name = "textBoxNumero"
-        Me.textBoxNumero.Size = New System.Drawing.Size(79, 20)
+        Me.textBoxNumero.Size = New System.Drawing.Size(100, 20)
         Me.textBoxNumero.TabIndex = 5
         '
         'buttonListar
         '
-        Me.buttonListar.Location = New System.Drawing.Point(201, 71)
+        Me.buttonListar.Location = New System.Drawing.Point(255, 74)
         Me.buttonListar.Name = "buttonListar"
         Me.buttonListar.Size = New System.Drawing.Size(75, 23)
         Me.buttonListar.TabIndex = 6
@@ -103,7 +103,7 @@ Partial Class VentanaListarMateriales
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(116, 200)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(116, 188)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
         Me.DateTimePicker1.TabIndex = 13
@@ -111,16 +111,16 @@ Partial Class VentanaListarMateriales
         'labelFecha
         '
         Me.labelFecha.AutoSize = True
-        Me.labelFecha.Location = New System.Drawing.Point(13, 205)
+        Me.labelFecha.Location = New System.Drawing.Point(20, 188)
         Me.labelFecha.Name = "labelFecha"
-        Me.labelFecha.Size = New System.Drawing.Size(37, 13)
+        Me.labelFecha.Size = New System.Drawing.Size(43, 13)
         Me.labelFecha.TabIndex = 16
-        Me.labelFecha.Text = "Fecha"
+        Me.labelFecha.Text = "Fecha:"
         '
         'labelPasillo
         '
         Me.labelPasillo.AutoSize = True
-        Me.labelPasillo.Location = New System.Drawing.Point(16, 234)
+        Me.labelPasillo.Location = New System.Drawing.Point(16, 221)
         Me.labelPasillo.Name = "labelPasillo"
         Me.labelPasillo.Size = New System.Drawing.Size(55, 13)
         Me.labelPasillo.TabIndex = 17
@@ -144,7 +144,7 @@ Partial Class VentanaListarMateriales
         Me.comboBoxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comboBoxCategoria.FormattingEnabled = True
         Me.comboBoxCategoria.Items.AddRange(New Object() {"", "Hardware", "Software"})
-        Me.comboBoxCategoria.Location = New System.Drawing.Point(116, 112)
+        Me.comboBoxCategoria.Location = New System.Drawing.Point(116, 109)
         Me.comboBoxCategoria.Name = "comboBoxCategoria"
         Me.comboBoxCategoria.Size = New System.Drawing.Size(100, 21)
         Me.comboBoxCategoria.TabIndex = 19
@@ -154,7 +154,7 @@ Partial Class VentanaListarMateriales
         Me.comboBoxSubCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comboBoxSubCategoria.FormattingEnabled = True
         Me.comboBoxSubCategoria.Items.AddRange(New Object() {"", "Equipo", "Periférico", "Antivirus", "Servicio"})
-        Me.comboBoxSubCategoria.Location = New System.Drawing.Point(116, 155)
+        Me.comboBoxSubCategoria.Location = New System.Drawing.Point(116, 150)
         Me.comboBoxSubCategoria.Name = "comboBoxSubCategoria"
         Me.comboBoxSubCategoria.Size = New System.Drawing.Size(100, 21)
         Me.comboBoxSubCategoria.TabIndex = 20
@@ -163,7 +163,7 @@ Partial Class VentanaListarMateriales
         '
         Me.comboBoxPasillo.FormattingEnabled = True
         Me.comboBoxPasillo.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8"})
-        Me.comboBoxPasillo.Location = New System.Drawing.Point(116, 231)
+        Me.comboBoxPasillo.Location = New System.Drawing.Point(116, 221)
         Me.comboBoxPasillo.Name = "comboBoxPasillo"
         Me.comboBoxPasillo.Size = New System.Drawing.Size(100, 21)
         Me.comboBoxPasillo.TabIndex = 21

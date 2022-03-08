@@ -98,6 +98,4 @@ Public Class VentanaListarMateriales
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
         DateTimePicker1.CustomFormat = "dd/MM/yyyy"
     End Sub
-
-
 End Class
