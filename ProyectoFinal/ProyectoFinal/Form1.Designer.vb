@@ -41,8 +41,11 @@ Partial Class Form1
         Me.buttonIconoModificar = New System.Windows.Forms.ToolStripButton()
         Me.buttonIconoListar = New System.Windows.Forms.ToolStripButton()
         Me.buttonIconoEliminar = New System.Windows.Forms.ToolStripButton()
+        Me.labelAlmacenMateriales = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'buttonCrearMaterial
@@ -83,6 +86,7 @@ Partial Class Form1
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -94,47 +98,47 @@ Partial Class Form1
         '
         Me.OpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.CrearMaterialToolStripMenuItem, Me.ModificarMaterialToolStripMenuItem, Me.ListarMaterialesToolStripMenuItem, Me.EliminarMaterialToolStripMenuItem, Me.ToolStripMenuItem2, Me.CerrarToolStripMenuItem})
         Me.OpToolStripMenuItem.Name = "OpToolStripMenuItem"
-        Me.OpToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
+        Me.OpToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
         Me.OpToolStripMenuItem.Text = "Opciones"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(168, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(197, 6)
         '
         'CrearMaterialToolStripMenuItem
         '
         Me.CrearMaterialToolStripMenuItem.Name = "CrearMaterialToolStripMenuItem"
-        Me.CrearMaterialToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.CrearMaterialToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
         Me.CrearMaterialToolStripMenuItem.Text = "Crear Material"
         '
         'ModificarMaterialToolStripMenuItem
         '
         Me.ModificarMaterialToolStripMenuItem.Name = "ModificarMaterialToolStripMenuItem"
-        Me.ModificarMaterialToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ModificarMaterialToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
         Me.ModificarMaterialToolStripMenuItem.Text = "Modificar Material"
         '
         'ListarMaterialesToolStripMenuItem
         '
         Me.ListarMaterialesToolStripMenuItem.Name = "ListarMaterialesToolStripMenuItem"
-        Me.ListarMaterialesToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ListarMaterialesToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
         Me.ListarMaterialesToolStripMenuItem.Text = "Listar Materiales"
         '
         'EliminarMaterialToolStripMenuItem
         '
         Me.EliminarMaterialToolStripMenuItem.Name = "EliminarMaterialToolStripMenuItem"
-        Me.EliminarMaterialToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.EliminarMaterialToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
         Me.EliminarMaterialToolStripMenuItem.Text = "Eliminar Material"
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(168, 6)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(197, 6)
         '
         'CerrarToolStripMenuItem
         '
         Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
-        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
         Me.CerrarToolStripMenuItem.Text = "Cerrar"
         '
         'ToolStrip1
@@ -182,18 +186,40 @@ Partial Class Form1
         Me.buttonIconoEliminar.Size = New System.Drawing.Size(23, 22)
         Me.buttonIconoEliminar.Text = "ToolStripButton4"
         '
+        'labelAlmacenMateriales
+        '
+        Me.labelAlmacenMateriales.AutoSize = True
+        Me.labelAlmacenMateriales.Font = New System.Drawing.Font("Consolas", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelAlmacenMateriales.Location = New System.Drawing.Point(205, 64)
+        Me.labelAlmacenMateriales.Name = "labelAlmacenMateriales"
+        Me.labelAlmacenMateriales.Size = New System.Drawing.Size(395, 37)
+        Me.labelAlmacenMateriales.TabIndex = 6
+        Me.labelAlmacenMateriales.Text = "Almacén de Materiales"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(31, 64)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(87, 89)
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.labelAlmacenMateriales)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.buttonEliminarMaterial)
         Me.Controls.Add(Me.buttonListarMaterial)
         Me.Controls.Add(Me.buttonModificarMaterial)
         Me.Controls.Add(Me.buttonCrearMaterial)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.Text = "Almacén de Materiales"
@@ -201,6 +227,7 @@ Partial Class Form1
         Me.MenuStrip1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -224,4 +251,6 @@ Partial Class Form1
     Friend WithEvents buttonIconoModificar As ToolStripButton
     Friend WithEvents buttonIconoListar As ToolStripButton
     Friend WithEvents buttonIconoEliminar As ToolStripButton
+    Friend WithEvents labelAlmacenMateriales As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

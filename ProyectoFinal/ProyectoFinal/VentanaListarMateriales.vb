@@ -1,9 +1,10 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Text.RegularExpressions
 
 Public Class VentanaListarMateriales
 
     Dim rejilla As New DataView
-    Private Sub buttonRegresar_Click(sender As Object, e As EventArgs) Handles buttonRegresar.Click
+    Private Sub buttonRegresar_Click(sender As Object, e As EventArgs)
         Dim ventanaInicio As New Form1
 
         ventanaInicio.Show()
@@ -20,10 +21,11 @@ Public Class VentanaListarMateriales
         Dim cmd As SqlCommand
         Dim concatenacion As String = ""
 
+        Dim regex As Regex = New Regex("^[1-9]*$")
+
         conn.ConnectionString = miConexionString
         Try
             conn.Open()
-            MessageBox.Show("Conexion establecida")
         Catch ex As Exception
             MessageBox.Show("Conexion no establecida")
         End Try
@@ -81,14 +83,23 @@ Public Class VentanaListarMateriales
 
         Next
 
-        If Not concatenacion = "" Then
-            Dim adaptador As New SqlDataAdapter("SELECT m.*, g.pas, g.sec, g.stock FROM Materiales m JOIN Gest_Materiales g ON m.num_mat = g.num_mat", conn)
-            Dim datos As New DataSet
-            adaptador.Fill(datos)
-            rejilla.Table = datos.Tables(0)
-            gridViewMateriales.DataSource = rejilla
-            rejilla.RowFilter = concatenacion
+        If Not regex.IsMatch(textBoxNumero.Text) Then
+            MessageBox.Show("Debe introducir un número")
+            Exit Sub
+        Else
+            If Not concatenacion = "" Then
+                Dim adaptador As New SqlDataAdapter("SELECT m.*, g.pas, g.sec, g.stock FROM Materiales m JOIN Gest_Materiales g ON m.num_mat = g.num_mat", conn)
+                Dim datos As New DataSet
+                adaptador.Fill(datos)
+
+                rejilla.Table = datos.Tables(0)
+                gridViewMateriales.DataSource = rejilla
+                rejilla.RowFilter = concatenacion
+
+
+            End If
         End If
+
     End Sub
 
     Private Sub buttonListar_Click(sender As Object, e As EventArgs) Handles buttonListar.Click
@@ -97,5 +108,34 @@ Public Class VentanaListarMateriales
 
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
         DateTimePicker1.CustomFormat = "dd/MM/yyyy"
+    End Sub
+
+    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+        mostrarVentanaInicio()
+        Me.Close()
+    End Sub
+
+    Private Sub InicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InicioToolStripMenuItem.Click
+        mostrarVentanaInicio()
+        Me.Close()
+    End Sub
+
+    Private Sub CrearMaterialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearMaterialToolStripMenuItem.Click
+        mostrarVentanaCrear()
+        Me.Close()
+    End Sub
+
+    Private Sub ModificarMaterialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarMaterialToolStripMenuItem.Click
+        mostrarVentanaModificar()
+        Me.Close()
+    End Sub
+
+    Private Sub EliminarMaterialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarMaterialToolStripMenuItem.Click
+        mostrarVentanaEliminar()
+        Me.Close()
+    End Sub
+
+    Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
+        Me.Close()
     End Sub
 End Class

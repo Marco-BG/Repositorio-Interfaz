@@ -120,7 +120,7 @@ Public Class VentanaCrearMaterial
         Dim regex As Regex = New Regex("^[1-9]+$")
 
         If Not regex.IsMatch(textBoxStock.Text) Then
-            MessageBox.Show("Debe introducir valores númericos")
+            MessageBox.Show("Debe introducir valores")
             Exit Sub
         End If
 

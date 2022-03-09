@@ -64,6 +64,7 @@ Partial Class VentanaCrearMaterial
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.labelCrearMaterial = New System.Windows.Forms.Label()
         Me.grupBoxCampos.SuspendLayout()
         Me.groupBoxSeccion.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -237,13 +238,13 @@ Partial Class VentanaCrearMaterial
         '
         'comboBoxPasillo
         '
+        Me.comboBoxPasillo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comboBoxPasillo.FormattingEnabled = True
         Me.comboBoxPasillo.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8"})
         Me.comboBoxPasillo.Location = New System.Drawing.Point(51, 43)
         Me.comboBoxPasillo.Name = "comboBoxPasillo"
         Me.comboBoxPasillo.Size = New System.Drawing.Size(106, 21)
         Me.comboBoxPasillo.TabIndex = 16
-        Me.comboBoxPasillo.Text = "1"
         '
         'labelPasillo
         '
@@ -448,12 +449,23 @@ Partial Class VentanaCrearMaterial
         Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton2.Text = "ToolStripButton2"
         '
+        'labelCrearMaterial
+        '
+        Me.labelCrearMaterial.AutoSize = True
+        Me.labelCrearMaterial.Font = New System.Drawing.Font("Consolas", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelCrearMaterial.Location = New System.Drawing.Point(290, 68)
+        Me.labelCrearMaterial.Name = "labelCrearMaterial"
+        Me.labelCrearMaterial.Size = New System.Drawing.Size(269, 37)
+        Me.labelCrearMaterial.TabIndex = 10
+        Me.labelCrearMaterial.Text = "Crear Material"
+        '
         'VentanaCrearMaterial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ClientSize = New System.Drawing.Size(812, 551)
+        Me.Controls.Add(Me.labelCrearMaterial)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox1)
@@ -519,4 +531,5 @@ Partial Class VentanaCrearMaterial
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents ToolStripButton2 As ToolStripButton
+    Friend WithEvents labelCrearMaterial As Label
 End Class

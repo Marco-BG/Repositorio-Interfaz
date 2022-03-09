@@ -6,7 +6,7 @@ Public Class VentanaModificarMaterial
         fechaRegistro.Format = DateTimePickerFormat.Custom
         fechaRegistro.CustomFormat = " "
     End Sub
-    Private Sub buttonRegresar_Click(sender As Object, e As EventArgs) Handles buttonRegresar.Click
+    Private Sub buttonRegresar_Click(sender As Object, e As EventArgs)
         Dim ventanaInicio As New Form1
 
         ventanaInicio.Show()
@@ -148,7 +148,7 @@ Public Class VentanaModificarMaterial
 
     End Sub
 
-    Private Sub buttonGuardar_Click(sender As Object, e As EventArgs) Handles buttonGuardar.Click
+    Private Sub buttonGuardar_Click(sender As Object, e As EventArgs) Handles toolStripGuardar.Click
         Dim conn As New SqlConnection
         Dim cmd As SqlCommand
         Dim cmdSelectNumber As SqlCommand
@@ -252,5 +252,34 @@ Public Class VentanaModificarMaterial
             End Try
 
         End If
+    End Sub
+
+    Private Sub InicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InicioToolStripMenuItem.Click
+        mostrarVentanaInicio()
+        Me.Close()
+    End Sub
+
+    Private Sub CrearMaterialesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearMaterialesToolStripMenuItem.Click
+        mostrarVentanaCrear()
+        Me.Close()
+    End Sub
+
+    Private Sub ListarMaterialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarMaterialToolStripMenuItem.Click
+        mostrarVentanaListar()
+        Me.Close()
+    End Sub
+
+    Private Sub EliminarMaterialToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles EliminarMaterialToolStripMenuItem1.Click
+        mostrarVentanaEliminar()
+        Me.Close()
+    End Sub
+
+    Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
+        Me.Close()
+    End Sub
+
+    Private Sub toolStripInicio_Click(sender As Object, e As EventArgs) Handles toolStripInicio.Click
+        mostrarVentanaInicio()
+        Me.Close()
     End Sub
 End Class

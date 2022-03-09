@@ -22,7 +22,7 @@ Partial Class VentanaModificarMaterial
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.buttonRegresar = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VentanaModificarMaterial))
         Me.labelNumeroMaterial = New System.Windows.Forms.Label()
         Me.textBoxRegistro = New System.Windows.Forms.TextBox()
         Me.buttonBuscar = New System.Windows.Forms.Button()
@@ -40,7 +40,6 @@ Partial Class VentanaModificarMaterial
         Me.textBoxCompra = New System.Windows.Forms.TextBox()
         Me.textBoxVenta = New System.Windows.Forms.TextBox()
         Me.textBoxStock = New System.Windows.Forms.TextBox()
-        Me.buttonGuardar = New System.Windows.Forms.Button()
         Me.comboBoxCategoria = New System.Windows.Forms.ComboBox()
         Me.comboBoxSubCategoria = New System.Windows.Forms.ComboBox()
         Me.fechaRegistro = New System.Windows.Forms.DateTimePicker()
@@ -56,24 +55,31 @@ Partial Class VentanaModificarMaterial
         Me.textBoxNumero = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CrearMaterialesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListarMaterialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarMaterialToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CerrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.toolStripGuardar = New System.Windows.Forms.ToolStripButton()
+        Me.toolStripInicio = New System.Windows.Forms.ToolStripButton()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.labelVentanaModificar = New System.Windows.Forms.Label()
         Me.groupBoxSeccion.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'buttonRegresar
-        '
-        Me.buttonRegresar.Location = New System.Drawing.Point(13, 13)
-        Me.buttonRegresar.Name = "buttonRegresar"
-        Me.buttonRegresar.Size = New System.Drawing.Size(75, 23)
-        Me.buttonRegresar.TabIndex = 0
-        Me.buttonRegresar.Text = "Regresar"
-        Me.buttonRegresar.UseVisualStyleBackColor = True
         '
         'labelNumeroMaterial
         '
         Me.labelNumeroMaterial.AutoSize = True
-        Me.labelNumeroMaterial.Location = New System.Drawing.Point(19, 68)
+        Me.labelNumeroMaterial.Location = New System.Drawing.Point(88, 167)
         Me.labelNumeroMaterial.Name = "labelNumeroMaterial"
         Me.labelNumeroMaterial.Size = New System.Drawing.Size(121, 13)
         Me.labelNumeroMaterial.TabIndex = 1
@@ -81,14 +87,14 @@ Partial Class VentanaModificarMaterial
         '
         'textBoxRegistro
         '
-        Me.textBoxRegistro.Location = New System.Drawing.Point(139, 68)
+        Me.textBoxRegistro.Location = New System.Drawing.Point(208, 167)
         Me.textBoxRegistro.Name = "textBoxRegistro"
         Me.textBoxRegistro.Size = New System.Drawing.Size(100, 20)
         Me.textBoxRegistro.TabIndex = 2
         '
         'buttonBuscar
         '
-        Me.buttonBuscar.Location = New System.Drawing.Point(245, 66)
+        Me.buttonBuscar.Location = New System.Drawing.Point(314, 165)
         Me.buttonBuscar.Name = "buttonBuscar"
         Me.buttonBuscar.Size = New System.Drawing.Size(75, 23)
         Me.buttonBuscar.TabIndex = 3
@@ -213,15 +219,6 @@ Partial Class VentanaModificarMaterial
         Me.textBoxStock.Size = New System.Drawing.Size(43, 20)
         Me.textBoxStock.TabIndex = 23
         '
-        'buttonGuardar
-        '
-        Me.buttonGuardar.Location = New System.Drawing.Point(267, 415)
-        Me.buttonGuardar.Name = "buttonGuardar"
-        Me.buttonGuardar.Size = New System.Drawing.Size(75, 23)
-        Me.buttonGuardar.TabIndex = 24
-        Me.buttonGuardar.Text = "Guardar"
-        Me.buttonGuardar.UseVisualStyleBackColor = True
-        '
         'comboBoxCategoria
         '
         Me.comboBoxCategoria.FormattingEnabled = True
@@ -243,6 +240,7 @@ Partial Class VentanaModificarMaterial
         Me.fechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.fechaRegistro.Location = New System.Drawing.Point(137, 147)
         Me.fechaRegistro.Name = "fechaRegistro"
+        Me.fechaRegistro.ShowCheckBox = True
         Me.fechaRegistro.Size = New System.Drawing.Size(100, 20)
         Me.fechaRegistro.TabIndex = 27
         Me.fechaRegistro.Value = New Date(2022, 2, 26, 0, 0, 0, 0)
@@ -365,7 +363,7 @@ Partial Class VentanaModificarMaterial
         Me.GroupBox1.Controls.Add(Me.textBoxDescripcion)
         Me.GroupBox1.Controls.Add(Me.textBoxVenta)
         Me.GroupBox1.Controls.Add(Me.textBoxCompra)
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 95)
+        Me.GroupBox1.Location = New System.Drawing.Point(82, 194)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(325, 302)
         Me.GroupBox1.TabIndex = 32
@@ -380,27 +378,127 @@ Partial Class VentanaModificarMaterial
         Me.GroupBox2.Controls.Add(Me.textBoxStock)
         Me.GroupBox2.Controls.Add(Me.comboBoxPasillo)
         Me.GroupBox2.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(379, 95)
+        Me.GroupBox2.Location = New System.Drawing.Point(448, 194)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(216, 302)
         Me.GroupBox2.TabIndex = 33
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Gestión de Materiales"
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(808, 24)
+        Me.MenuStrip1.TabIndex = 34
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'OpcionesToolStripMenuItem
+        '
+        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.CrearMaterialesToolStripMenuItem, Me.ListarMaterialToolStripMenuItem, Me.EliminarMaterialToolStripMenuItem1, Me.ToolStripMenuItem1, Me.CerrarToolStripMenuItem})
+        Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
+        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
+        Me.OpcionesToolStripMenuItem.Text = "Opciones"
+        '
+        'InicioToolStripMenuItem
+        '
+        Me.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem"
+        Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.InicioToolStripMenuItem.Text = "Inicio"
+        '
+        'CrearMaterialesToolStripMenuItem
+        '
+        Me.CrearMaterialesToolStripMenuItem.Name = "CrearMaterialesToolStripMenuItem"
+        Me.CrearMaterialesToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.CrearMaterialesToolStripMenuItem.Text = "Crear Material"
+        '
+        'ListarMaterialToolStripMenuItem
+        '
+        Me.ListarMaterialToolStripMenuItem.Name = "ListarMaterialToolStripMenuItem"
+        Me.ListarMaterialToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.ListarMaterialToolStripMenuItem.Text = "Listar Materiales"
+        '
+        'EliminarMaterialToolStripMenuItem1
+        '
+        Me.EliminarMaterialToolStripMenuItem1.Name = "EliminarMaterialToolStripMenuItem1"
+        Me.EliminarMaterialToolStripMenuItem1.Size = New System.Drawing.Size(163, 22)
+        Me.EliminarMaterialToolStripMenuItem1.Text = "Eliminar Material"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(160, 6)
+        '
+        'CerrarToolStripMenuItem
+        '
+        Me.CerrarToolStripMenuItem.Name = "CerrarToolStripMenuItem"
+        Me.CerrarToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.CerrarToolStripMenuItem.Text = "Cerrar"
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolStripGuardar, Me.toolStripInicio})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(808, 25)
+        Me.ToolStrip1.TabIndex = 35
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'toolStripGuardar
+        '
+        Me.toolStripGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.toolStripGuardar.Image = CType(resources.GetObject("toolStripGuardar.Image"), System.Drawing.Image)
+        Me.toolStripGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolStripGuardar.Name = "toolStripGuardar"
+        Me.toolStripGuardar.Size = New System.Drawing.Size(23, 22)
+        Me.toolStripGuardar.Text = "ToolStripButton1"
+        '
+        'toolStripInicio
+        '
+        Me.toolStripInicio.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.toolStripInicio.Image = CType(resources.GetObject("toolStripInicio.Image"), System.Drawing.Image)
+        Me.toolStripInicio.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolStripInicio.Name = "toolStripInicio"
+        Me.toolStripInicio.Size = New System.Drawing.Size(23, 22)
+        Me.toolStripInicio.Text = "ToolStripButton2"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(21, 74)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(85, 90)
+        Me.PictureBox1.TabIndex = 36
+        Me.PictureBox1.TabStop = False
+        '
+        'labelVentanaModificar
+        '
+        Me.labelVentanaModificar.AutoSize = True
+        Me.labelVentanaModificar.Font = New System.Drawing.Font("Consolas", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelVentanaModificar.Location = New System.Drawing.Point(257, 74)
+        Me.labelVentanaModificar.Name = "labelVentanaModificar"
+        Me.labelVentanaModificar.Size = New System.Drawing.Size(341, 37)
+        Me.labelVentanaModificar.TabIndex = 37
+        Me.labelVentanaModificar.Text = "Modificar Material"
+        '
         'VentanaModificarMaterial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(808, 506)
+        Me.Controls.Add(Me.labelVentanaModificar)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.buttonGuardar)
         Me.Controls.Add(Me.buttonBuscar)
         Me.Controls.Add(Me.textBoxRegistro)
         Me.Controls.Add(Me.labelNumeroMaterial)
-        Me.Controls.Add(Me.buttonRegresar)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "VentanaModificarMaterial"
         Me.Text = "VentanaModificarMaterial"
         Me.groupBoxSeccion.ResumeLayout(False)
@@ -409,12 +507,15 @@ Partial Class VentanaModificarMaterial
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents buttonRegresar As Button
     Friend WithEvents labelNumeroMaterial As Label
     Friend WithEvents textBoxRegistro As TextBox
     Friend WithEvents buttonBuscar As Button
@@ -432,7 +533,6 @@ Partial Class VentanaModificarMaterial
     Friend WithEvents textBoxCompra As TextBox
     Friend WithEvents textBoxVenta As TextBox
     Friend WithEvents textBoxStock As TextBox
-    Friend WithEvents buttonGuardar As Button
     Friend WithEvents comboBoxCategoria As ComboBox
     Friend WithEvents comboBoxSubCategoria As ComboBox
     Friend WithEvents fechaRegistro As DateTimePicker
@@ -448,4 +548,17 @@ Partial Class VentanaModificarMaterial
     Friend WithEvents textBoxNumero As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents OpcionesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InicioToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CrearMaterialesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ListarMaterialToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarMaterialToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
+    Friend WithEvents CerrarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents toolStripGuardar As ToolStripButton
+    Friend WithEvents toolStripInicio As ToolStripButton
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents labelVentanaModificar As Label
 End Class

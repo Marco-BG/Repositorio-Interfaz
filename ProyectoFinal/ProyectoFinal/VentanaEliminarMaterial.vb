@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class VentanaEliminarMaterial
-    Private Sub buttonRegresarInicio_Click(sender As Object, e As EventArgs) Handles buttonRegresarInicio.Click
+    Private Sub buttonRegresarInicio_Click(sender As Object, e As EventArgs)
         Dim ventanaInicio As New Form1
 
         ventanaInicio.Show()
@@ -40,5 +40,34 @@ Public Class VentanaEliminarMaterial
         Catch ex As Exception
             MessageBox.Show("Debe introducir el id del material")
         End Try
+    End Sub
+
+    Private Sub InicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InicioToolStripMenuItem.Click
+        mostrarVentanaInicio()
+        Me.Close()
+    End Sub
+
+    Private Sub CrearMaterialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearMaterialToolStripMenuItem.Click
+        mostrarVentanaCrear()
+        Me.Close()
+    End Sub
+
+    Private Sub ModificarMaterialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificarMaterialToolStripMenuItem.Click
+        mostrarVentanaModificar()
+        Me.Close()
+    End Sub
+
+    Private Sub ListarMaterialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarMaterialToolStripMenuItem.Click
+        mostrarVentanaListar()
+        Me.Close()
+    End Sub
+
+    Private Sub CerrarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarToolStripMenuItem.Click
+        Me.Close()
+    End Sub
+
+    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+        mostrarVentanaInicio()
+        Me.Close()
     End Sub
 End Class
