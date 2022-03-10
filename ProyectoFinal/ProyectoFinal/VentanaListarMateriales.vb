@@ -33,8 +33,10 @@ Public Class VentanaListarMateriales
         If Not textBoxNumero.Text.Trim = Nothing Then
             If concatenacion = "" Then
                 concatenacion = "num_mat = '" + textBoxNumero.Text + "'"
+                textBoxNumero.Clear()
             Else
                 concatenacion += " AND num_mat = '" + textBoxNumero.Text + "'"
+                textBoxNumero.Clear()
             End If
         End If
 
@@ -75,9 +77,11 @@ Public Class VentanaListarMateriales
             If radio.Checked Then
                 If concatenacion = "" Then
                     concatenacion = "sec = '" + radio.Text + "'"
+                    radio.Checked = False
                 Else
                     MessageBox.Show(radio.Text)
                     concatenacion += " AND sec = '" + radio.Text + "'"
+                    radio.Checked = False
                 End If
             End If
 

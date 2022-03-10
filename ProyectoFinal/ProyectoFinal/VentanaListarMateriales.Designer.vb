@@ -169,7 +169,7 @@ Partial Class VentanaListarMateriales
         '
         Me.comboBoxPasillo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comboBoxPasillo.FormattingEnabled = True
-        Me.comboBoxPasillo.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8"})
+        Me.comboBoxPasillo.Items.AddRange(New Object() {"", "1", "2", "3", "4", "5", "6", "7", "8"})
         Me.comboBoxPasillo.Location = New System.Drawing.Point(126, 303)
         Me.comboBoxPasillo.Name = "comboBoxPasillo"
         Me.comboBoxPasillo.Size = New System.Drawing.Size(100, 21)

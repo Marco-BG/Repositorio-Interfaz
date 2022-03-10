@@ -20,10 +20,12 @@ Public Class VentanaConfirmacionEliminar
         cmd.ExecuteNonQuery()
 
         MessageBox.Show("Se ha borrado el material", "Borrado de Material")
+        mostrarVentanaEliminar()
         Me.Close()
     End Sub
 
     Private Sub buttonCancelar_Click(sender As Object, e As EventArgs) Handles buttonCancelar.Click
+        mostrarVentanaEliminar()
         Me.Close()
     End Sub
 End Class

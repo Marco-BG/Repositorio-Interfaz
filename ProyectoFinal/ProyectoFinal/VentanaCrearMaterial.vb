@@ -6,7 +6,8 @@ Public Class VentanaCrearMaterial
 
     Private Sub VentanaCrearMaterial_Load(sender As Object, e As EventArgs) Handles Me.Load
         cargarPrimerValorSubCategoria()
-
+        comboBoxPasillo.Text = "1"
+        comboBoxCategoria.Text = "Hardware"
         updateNumberMaterial()
     End Sub
 
@@ -118,11 +119,17 @@ Public Class VentanaCrearMaterial
         Dim cmd As New SqlCommand
 
         Dim regex As Regex = New Regex("^[1-9]+$")
+        'Dim regexMaterial As Regex = New Regex("^[aA-zZ]+$")
+
 
         If Not regex.IsMatch(textBoxStock.Text) Then
-            MessageBox.Show("Debe introducir valores")
+            MessageBox.Show("Debe rellenar el campo " + labelStock.Text + " con números")
             Exit Sub
         End If
+
+        'If Not regexMaterial.IsMatch(textBoxMaterial.Text) Then
+        '    MessageBox.Show("Debe rellenar el campo " + labelMaterial.Text + " con letras")
+        'End If
 
         Dim valorSeccion
 

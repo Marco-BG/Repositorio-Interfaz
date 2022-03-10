@@ -168,7 +168,9 @@ Partial Class VentanaCrearMaterial
         '
         'comboBoxSubCategoria
         '
+        Me.comboBoxSubCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comboBoxSubCategoria.FormattingEnabled = True
+        Me.comboBoxSubCategoria.Items.AddRange(New Object() {"Equipo", "Periféricos"})
         Me.comboBoxSubCategoria.Location = New System.Drawing.Point(111, 139)
         Me.comboBoxSubCategoria.Name = "comboBoxSubCategoria"
         Me.comboBoxSubCategoria.Size = New System.Drawing.Size(106, 21)
@@ -195,6 +197,7 @@ Partial Class VentanaCrearMaterial
         'comboBoxCategoria
         '
         Me.comboBoxCategoria.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.comboBoxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comboBoxCategoria.FormattingEnabled = True
         Me.comboBoxCategoria.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.comboBoxCategoria.Items.AddRange(New Object() {"Hardware", "Software"})
@@ -202,7 +205,6 @@ Partial Class VentanaCrearMaterial
         Me.comboBoxCategoria.Name = "comboBoxCategoria"
         Me.comboBoxCategoria.Size = New System.Drawing.Size(106, 21)
         Me.comboBoxCategoria.TabIndex = 4
-        Me.comboBoxCategoria.Text = "Hardware"
         '
         'textBoxMaterial
         '

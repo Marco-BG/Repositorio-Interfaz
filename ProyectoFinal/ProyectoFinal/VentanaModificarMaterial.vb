@@ -97,6 +97,7 @@ Public Class VentanaModificarMaterial
             textBoxRegistro.Clear()
             textBoxNumero.Clear()
         Finally
+
             loadPasillos()
 
         End Try
@@ -117,6 +118,7 @@ Public Class VentanaModificarMaterial
         End If
     End Sub
     Private Sub loadPasillos()
+        comboBoxPasillo.Items.Clear()
         comboBoxPasillo.Items.Add(1)
         comboBoxPasillo.Items.Add(2)
         comboBoxPasillo.Items.Add(3)
@@ -174,6 +176,9 @@ Public Class VentanaModificarMaterial
             ElseIf textBoxMaterial.Text.Equals("") Then
                 MessageBox.Show("Rellene el campo " + labelMaterial.Text)
                 Exit Sub
+            ElseIf textBoxStock.Text.Equals("") Then
+                MessageBox.Show("Campo obligatorio y debe introducir números " + labelStock.Text)
+                Exit Sub
             Else
                 cmdSelectNumber = New SqlCommand("SELECT num_mat FROM Materiales WHERE num_mat = @numero", conn)
                 cmdSelectNumber.CommandType = CommandType.Text
@@ -183,7 +188,7 @@ Public Class VentanaModificarMaterial
 
                 If sqlDataReader.HasRows Then
                     sqlDataReader.Read()
-                    MessageBox.Show(CStr(CInt(sqlDataReader.GetInt32(0))))
+                    'MessageBox.Show(CStr(CInt(sqlDataReader.GetInt32(0))))
 
                     numeroGuardado = sqlDataReader.GetInt32(0)
 

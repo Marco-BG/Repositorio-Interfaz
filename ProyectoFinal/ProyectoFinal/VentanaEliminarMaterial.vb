@@ -33,6 +33,7 @@ Public Class VentanaEliminarMaterial
                 VentanaConfirmacionEliminar.textBoxMaterialBorrar.Text = datosSelect.GetString(1)
 
                 VentanaConfirmacionEliminar.Show()
+                Me.Close()
 
             Else
                 MessageBox.Show("No existe el material")

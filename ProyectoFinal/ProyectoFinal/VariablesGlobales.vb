@@ -27,7 +27,7 @@ Module VariablesGlobales
     Public Sub mostrarVentanaListar()
         Dim ventanaListarMateriales As New VentanaListarMateriales
 
-        ventanaListarMateriales.ShowDialog()
+        ventanaListarMateriales.Show()
 
     End Sub
     Public Sub mostrarVentanaEliminar()
